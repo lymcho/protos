@@ -1,0 +1,181 @@
+@import "variables.sass"
+//global
+*
+	margin: 0
+	padding: 0
+	font-family: $font-stack
+img
+
+	display: block
+
+
+.container
+	width: 1060px
+	margin: 0 auto
+	display: block
+
+
+.leftrail
+	width: 224px
+	height: 1200px
+	// background-color: $color-gray-md
+	display: block
+	float: left
+	margin-right: $space-xl
+	>:nth-child(1)
+		border: 1px solid $color-gray-lt
+
+
+//filter section
+#filter-options
+	margin: $space-s 0
+
+	//hide all the actual checkboxes
+	ul
+		list-style: none
+
+	input
+		// display: none
+		
+	li
+		display: inline
+	
+	label
+		display: inline
+		font-size: $font-size-s
+		font-weight: $font-weight-medium
+		color: $color-gray-dk
+		//border: 1px solid $color-gray-lt
+		//padding: $space-s $space-m
+		//margin: 0 $space-s 0 0 
+		span
+			padding: 0 0 0 $space-s
+			color: $color-gray-md
+			font-weight: $font-weight-light
+		//&:hover
+			//border: 1px solid $color-gray-md
+
+//selected state for label
+.selected
+	//background-color: $color-gray-md
+	font-size: $font-weight-medium
+	//border: 1px solid $color-brand !important
+
+
+
+//coupon listings
+.card
+	//background-color: $color-gray-bg
+	display: flex 
+	flex-flow: row nowrap
+	//%off, sale info, cta
+	height: auto
+	width: auto
+	margin-top: $space-xs
+	border-bottom: 1px solid $color-gray-lt
+	border-radius: 4px
+	justify-content: center
+	align-items: center
+
+	.left
+		display: none
+		//align left
+		margin-right: auto
+		height: auto
+		padding: $space-m
+		justify-content: center
+		align-items: center
+		text-align: center
+
+	.mid
+		//border-left: 1px solid $color-gray-lt
+		padding: $space-m 0 $space-m 0
+		width: 560px 
+		>:nth-child(1)
+			margin: 0
+		//heading
+		>:nth-child(2)
+			margin: $space-s 0 $space-s 0
+
+
+	.right
+		//align right
+		margin-left: auto
+		text-align: center
+		//min-width: 180px
+		>:nth-child(1)
+			background-color: $color-brand
+			padding: $space-s 0 $space-s 0 
+			margin: $space-m
+			width: 160px 
+			border-radius: 2px
+			color: $color-white
+		>:nth-child(2)
+			margin: $space-m 0 0 0	
+
+
+
+//tag styles
+.tags
+	padding: $space-xxs $space-xs
+	font-size: $font-size-xxs
+	font-weight: $font-weight-medium
+	letter-spacing: 0.05rem
+	color: $color-white
+	display: inline
+	text-transform: uppercase
+	border-radius: 2px
+	&.in-store
+		background-color: $color-purple
+	&.sale
+		background-color: $color-blue
+	&.promocode
+		background-color: $color-pink
+
+// font styles
+//page heading
+h1
+	font-size: $font-size-xxl
+	font-weight: $font-weight-light
+	line-height: $line-height-tight
+	margin: 0
+
+//title on card
+h2
+	font-size: $font-size-xl
+	font-weight: $font-weight-light
+	line-height: $line-height-tight
+
+//body text on card
+h3
+	font-size: $font-size-s
+	color: $color-gray-md
+	font-weight: $font-weight-medium
+	ine-height: $line-height-tight
+	margin-bottom: $space-xs
+//bucksback callout
+h4
+	font-size: $font-size-s
+	font-weight: $font-weight-medium
+	color: $color-brand
+//rail section title
+h5
+	font-size: $font-size-m
+	font-weight: $font-weight-bold
+	color: $color-black
+	padding-bottom: $space-s
+	margin: 0
+	border-bottom: 1px solid $color-gray-lt
+sup
+	font-size: $font-size-s
+.highlight
+	font-weight: $font-weight-bold
+
+.blue
+	color: $color-blue
+
+
+//link styles
+label, a
+	&:hover
+		cursor: pointer
