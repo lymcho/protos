@@ -9,6 +9,51 @@
 img {
   display: block; }
 
+.hotspot {
+  width: 200px;
+  height: 40px;
+  opacity: 0;
+  background-color: red;
+  position: absolute;
+  top: 838px;
+  left: 1040px;
+  z-index: 3;
+  cursor: pointer; }
+
+.modal {
+  width: 718px;
+  color: white;
+  padding: 1rem;
+  margin: 0 auto;
+  position: fixed;
+  top: 270px;
+  left: 361px;
+  z-index: 5; }
+
+.overlay {
+  display: block;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  opacity: 0.5; }
+
+.hide {
+  display: none; }
+
+#close {
+  position: absolute;
+  background-color: blue;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  cursor: pointer; }
+
 .container {
   width: 1060px;
   margin: 0 auto;
