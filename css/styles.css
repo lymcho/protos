@@ -15,7 +15,7 @@ img {
   opacity: 0;
   background-color: red;
   position: absolute;
-  top: 838px;
+  top: 490px;
   left: 1040px;
   z-index: 3;
   cursor: pointer; }
@@ -26,7 +26,7 @@ img {
   padding: 1rem;
   margin: 0 auto;
   position: fixed;
-  top: 170px;
+  top: 120px;
   left: 361px;
   z-index: 5; }
 
