@@ -9,17 +9,41 @@
 </head>
 <body>
 	<img src="images/full_merchantpge.png" width="1440">
+	<a href="index2.html" target="_blank"><div class="hotspot">click me</div></a>
 	<!-- after click this, relink to turbo tax website -->
 	<!-- <a href="index2.html" target="_blank"><div class="hotspot">click me</div></a> -->
 	<!-- modal here -->
-<div class="overlay"></div>
- 
-<div class="modal">
-	<img src="images/modal.png" width="718px">
-	<button id="close">close</button>
-</div>
+	<div class="overlay"></div>
+	<div class="modal">
+		<img src="images/modal.png" width="718px">
+		<button id="close">close</button>
+	</div>
+
+<script>
+	//declare variables
+var modal = document.querySelector('.modal');
+var overlay=document.querySelector('.overlay');
+var close = document.querySelector('#close');
+var open = document.querySelector('.hotspot');
+//fn that hide overlay and modal 
+function hideModal(){
+	modal.classList.add("hide");
+	overlay.classList.add("hide");
+}
+//when click button close on modal
+close.addEventListener("click", function(){
+	hideModal();
+})
+//when click hotspot
+open.addEventListener("click", function(){
+	//load modal again for when new window open
+	modal.classList.remove("hide");
+	overlay.classList.remove("hide");
+	//on click, current window changes to target page
+	window.location = "https://www.target.com/c/tax-software/-/N-ws5l1";
+})
+
+</script>
 
 
-
-<script src="js/modalShow.js"></script>
 </body>

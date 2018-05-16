@@ -19,10 +19,39 @@
 </div>
 
 
-<!-- links to other stuff -->
-<a href="http://coupons.target.com/?clkid=c6a7810eNd49e0c1f309815723f91412f&lnm=81938&afid=Groupon%2C%20Inc&ref=tgt_adv_xasd0002#?lnk=fnav_t_spc_1_17&intc=28073|null&intc=28073|null" target="_blank">Click me to see target offers</a>
-<a href="html/seo_merchant.html">seo merchant</a>
 
-<script src="js/modal.js"></script>
-<script src="js/windows.js"></script>
+
+
+<!-- this script enable modal to hide & redirect to target upon click -->
+<script>
+	//declare variables
+var modal = document.querySelector('.modal');
+var overlay=document.querySelector('.overlay');
+var close = document.querySelector('#close');
+var open = document.querySelector('.hotspot');
+//hide overlay and modal at start
+function hideModal(){
+	modal.classList.add("hide");
+	overlay.classList.add("hide");
+}
+function showModal(){
+	modal.classList.add("hide");
+	overlay.classList.add("hide");
+}
+
+hideModal();
+//when click button open, opens overlay and modal
+open.addEventListener("click", function(){
+	modal.classList.remove("hide");
+	overlay.classList.remove("hide");
+	//on click, current window changes to target page
+	window.location = "https://www.target.com/c/tax-software/-/N-ws5l1";
+})
+
+//when click button close on modal
+close.addEventListener("click", function(){
+	showModal();
+})
+
+</script>
 </body>
