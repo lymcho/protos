@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <title>50% Off Target Coupons, Promo Codes &amp; Deals  2018 - Groupon</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+</head>
+<body>
+	<img src="images/full_merchantpge.png" width="1440">
+	<!-- after click this, current page relink to turbo tax website while new tab becomes coupon page with modal-->
+	<a href="2c.html" target="_blank"><div class="hotspot">click me</div></a>
+	<!-- modal here -->
+	<div class="overlay"></div>
+	<div class="modal">
+	<img src="images/modal_2c.png" width="718px">
+	<button id="close">close</button>
+</div>
+
+
+
+
+
+<!-- this script enable modal to hide & redirect to target upon click -->
+<script>
+	//declare variables
+var modal = document.querySelector('.modal');
+var overlay=document.querySelector('.overlay');
+var close = document.querySelector('#close');
+var open = document.querySelector('.hotspot');
+//hide overlay and modal at start
+function hideModal(){
+	modal.classList.add("hide");
+	overlay.classList.add("hide");
+}
+function showModal(){
+	modal.classList.add("hide");
+	overlay.classList.add("hide");
+}
+
+hideModal();
+//when click button open, opens overlay and modal
+open.addEventListener("click", function(){
+	modal.classList.remove("hide");
+	overlay.classList.remove("hide");
+	//on click, current window changes to target page
+	window.location = "https://www.target.com/c/bedding-home/-/N-5xtv4Z5tdv0?clkid=c6a7810eNaf0e5923f11ff4baec7b0fa6&lnm=477579&afid=Groupon%2C%20Inc&ref=tgt_adv_xasd0002";
+})
+
+//when click button close on modal
+close.addEventListener("click", function(){
+	showModal();
+})
+
+</script>
+</body>
