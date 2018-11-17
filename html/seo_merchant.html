@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.ico">
 </head>
 <body>
 	<!-- top groupon nav -->
@@ -22,9 +23,28 @@
 		<!-- ############################################################################# -->
 		<div class="leftrail">
 			<!-- logo -->
-			<img src="../images/logo.png" width="216px">
+			<img src="../images/logo.png" width="222px">
+
+			<!-- bucks back promo -->
+			<img src="../images/promo_bucksback.png" width="224px">
 			<br>
-			<h5>Filter by</h5>
+			<h5>Refine</h5>
+			<ul id="refine">
+			  	<li>
+			  	<!-- verified -->
+				  	<input type="checkbox">
+					<label >Verified(4)</label>
+					<br>
+			  	<li>
+			  	<!-- groupon exclusive-->
+				  	<input type="checkbox">
+				  	<label>Only on Groupon(2)</label>
+				  	<br>
+			  	</li>
+				
+			</ul>	
+			<br>
+			<h5>Filter by Offer Type</h5>
 			<ul id="filter-options">
 			  	<li>
 			  	<!-- promocode represents all promocodes -->
@@ -34,13 +54,19 @@
 			  	<li>
 			  	<!-- sale represents all sale -->
 				  	<input type="checkbox" value="filter_sale" id="filter_2" data-filter_id="sale">
-				  	<label for="filter_2">Sales(5)</label>
+				  	<label for="filter_2">Online Sales(5)</label>
 				  	<br>
 			  	</li>
 				 <li>
 				  	<!-- instore represents all in store offer -->
 				  	<input type="checkbox" value="filter_instore" id="filter_3" data-filter_id="instore">
-				  	<label for="filter_3">2 In-Store Offers(9)</label>
+				  	<label for="filter_3">In-Store Offers(9)</label>
+				  	<br>
+				  </li>
+				  <li>
+				  	<!-- groupon represents all groupon offers -->
+				  	<input type="checkbox" value="filter_groupon" id="filter_3" data-filter_id="groupon">
+				  	<label for="filter_3">Groupon Deals(1)</label>
 				  	<br>
 				  </li>
 			</ul>	
@@ -48,16 +74,22 @@
 			<!-- about merchant -->
 			<br>
 			<h5>About Target</h5>
-			<img src="../images/about.png" width="216px">
-			<h3>Merchant Rating</h3>
-			<h3>When you're looking for a Target coupon, look no further...</h3>
+			<!-- <img src="../images/about.png" width="216px">
+			<h3>Merchant Rating</h3> -->
+			<h3>When you're looking for a Target coupon, look no further lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</h3>
 			<h3 class="blue">Read More</h3>
+			<br>
+				<!-- other stores -->
+			<br>
+			<h5>Related Stores</h5>
+			<h3 class="blue">Amazon</h3>
+			<h3 class="blue">Walgreens</h3>
+			<h3 class="blue">Walmart</h3>
 			<br>
 			<!-- email subscribe -->
 			<!-- <img src="../images/alert.png" width="216px">
 			<br> -->
-			<!-- bucks back promo -->
-			<img src="../images/promo04.png" width="216px">
+			
 			<br>
 
 		</div>
@@ -67,63 +99,86 @@
 		<!-- breadcrumb -->
 		<img src="../images/nav_breadcrumb.png" width="600px">
 		<!-- heading -->
-		<h1>76 Target Promo Codes & Coupon Codes</h1>
+		<h2>76 Target Promo Codes & Coupon Codes</h2>
+	
 		<!-- filter options -->
 		
 		<!-- result set -->
 		<ul id="product-list">
 			<li class="card filter_promocode">
 		   		<div class="left">
-					<h2>15<sup>%</sup></h2>
-					<h3>OFF</h2>
+					<p class="markdown">15%</p>
+					<p class="markdown">OFF</p>
+					
 
 				</div>
 				<div class="mid">
 					<div class="tags promocode">Promo code</div>
-					<h2><span class="highlight">15% off&nbsp;</span>&nbsp;Target College Registry<span class="highlight">&nbsp;and Free Shipping</span></h2>
+					<div class="tags verified">Verifed</div>
+					<h2><span class="highlight">15% off&nbsp;</span>Target College Registry<span class="highlight">&nbsp;and Free Shipping</span></h2>
 					<h3>Some times Lorem ipsum dolor sit amet, consectetur...</h3>
 				</div>
 				<div class="right">
-					<div><a>Get Coupon Code</a></div>
+					<div><a>Get coupon code</a></div>
 					<h4>+1% bucks back</h4>
 				</div>
 		  	</li>
 			
 		  <li class="card filter_instore">
 		    <div class="left">
-					<h2>30<sup>%</sup></h2>
-					<h3>OFF</h3>
+		    	<img src="../images/nullstate.png" width="80px">
+					
 				</div>
 				<div class="mid">
-					<div class="tags in-store">In-Store Offer</div>
+					<div class="tags in-store">Online In-Store</div>
+					<div class="tags verified">Verifed</div>
+					<div class="tags exclusive">exclusive</div>
 					<h2><span class="highlight">30% off&nbsp;</span>Victoria Beckham For Target Collection</h2>
 					<h3>Some times Lorem ipsum dolor sit amet, consectetur adip.</h3>
 				</div>
 				<div class="right">
-					<div><a>see sale</a></div>
+					<div><a>See offer</a></div>
 					<h4>+1% bucks back</h4>
 				</div>
 		  </li>
 		  <li class="card filter_sale">
 		    <div class="left">
-					<h2>50<sup>%</sup></h2>
-					<h3>OFF</h2>
+					<p class="markdown">50%</p>
+					<p class="markdown">OFF</p>
 				</div>
 				<div class="mid">
 					<div class="tags sale">Sale</div>
+					<div class="tags verified">Verifed</div>
 					<h2>Instant pot 7-in-1 Pressure Cooker</h2>
 					<h3>Some times Lorem ipsum dolor sit amet, consectetur ad.</h3>
 				</div>
 				<div class="right">
-					<div><a>see sale</a></div>
+					<div><a>See sale</a></div>
 					<h4>+1% bucks back</h4>
 				</div>
 		  </li>
-		   	
+		   	<li class="card filter_groupon">
+				
+				<div class="left">
+					<p class="markdown">50%</p>
+					<p class="markdown">OFF</p>
+				</div>
+				<div class="mid">
+					<div class="tags groupon">Groupon</div>
+					<div class="tags verified">Verifed</div>
+					<div class="tags exclusive">exclusive</div>
+					<h2>$25 for $50 to Spend in Target</h2>
+					<h3>Some times Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quos, asperiores repudiandae soluta consectetur, praesentium e.</h3>
+				</div>
+				<div class="right">
+					<div><a>See deal</a></div>
+					<h4>+1% bucks back</h4>
+				</div>
+			</li>
 		   	<li class="card filter_promocode">
 			    <div class="left">
-					<h2>10<sup>%</sup></h2>
-					<h3>OFF</h2>
+					<p class="markdown">10%</p>
+					<p class="markdown">OFF</p>
 				</div>
 				<div class="mid">
 					<div class="tags promocode">Promo code</div>
@@ -131,14 +186,14 @@
 					<h3>Some times Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quos, asperiores repudiandae soluta consectetur, praesentium e.</h3>
 				</div>
 				<div class="right">
-					<div><a>Get Coupon Code</a></div>
+					<div><a>Get coupon code</a></div>
 					<h4>+1% bucks back</h4>
 				</div>
 		  	</li>
 		   <li class="card filter_sale">
 		    <div class="left">
-					<h2>30<sup>%</sup></h2>
-					<h3>OFF</h2>
+					<p class="markdown">FREE</p>
+					<p class="markdown">SHIPPING</p>
 				</div>
 				<div class="mid">
 					<div class="tags sale">Sale</div>
@@ -146,18 +201,18 @@
 					<h3>Some times Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quos, asperiores repudiandae soluta consectetur, praesentium e.</h3>
 				</div>
 				<div class="right">
-					<div><a>see sale</a></div>
+					<div><a>See sale</a></div>
 					<h4>+1% bucks back</h4>
 				</div>
 		  </li>
 		    <li class="card filter_sale">
 				<div class="left">
-					<h2><sup>$</sup>10</h2>
-					<h3>OFF</h2>
+					<p class="markdown">GIFT</p>
+					<p class="markdown">CARD</p>
 				</div>
 				<div class="mid">
 					<div class="tags sale">Sale</div>
-					<h2>$10 Off TurboTax + Free $5 Gift Card</h2>
+					<h2>Free $5 Gift Card</h2>
 					<h3>Some times Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quos, asperiores repudiandae soluta consectetur, praesentium e.</h3>
 				</div>
 				<div class="right">
@@ -165,36 +220,23 @@
 					<h4>+1% bucks back</h4>
 				</div>
 			</li>
-			<li class="card filter_instore">
+			
+			<li class="card filter_sale">
 			    <div class="left">
-					<h2>16<sup>%</sup></h2>
-					<h3>OFF</h2>
-				</div>
-				<div class="mid">
-					<div class="tags in-store">In-Store Offer</div>
-					<h2>Target Mystery Deal from Groupon</h2>
-					<h3>Some times Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quos, asperiores repudiandae soluta consectetur, praesentium e.</h3>
-				</div>
-				<div class="right">
-					<div><a>see sale</a></div>
-					<h4>+1% bucks back</h4>
-				</div>
-			</li>
-		  	<li class="card filter_sale">
-				<div class="left">
-					<h2><sup>$</sup>15</h2>
-					<h3>OFF</h2>
+					<p class="markdown">30%</p>
+					<p class="markdown">Off</p>
 				</div>
 				<div class="mid">
 					<div class="tags sale">Sale</div>
-					<h2>Weekly Baby Deals</h2>
+					<h2>Up to 30% off / Target Mystery Deal from Groupon</h2>
 					<h3>Some times Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quos, asperiores repudiandae soluta consectetur, praesentium e.</h3>
 				</div>
 				<div class="right">
-					<div><a>see sale</a></div>
+					<div><a>See sale</a></div>
 					<h4>+1% bucks back</h4>
 				</div>
 			</li>
+		  	
 		  
 		</ul>
 

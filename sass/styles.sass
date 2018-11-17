@@ -8,7 +8,8 @@ img
 
 	display: block
 
-
+body
+	background-color: $color-gray-bg
 //hotspot for usertesting 
 .hotspot 
 	width: 200px
@@ -63,6 +64,7 @@ img
 	display: block
 
 
+
 .leftrail
 	width: 224px
 	height: 1200px
@@ -73,6 +75,34 @@ img
 	>:nth-child(1)
 		border: 1px solid $color-gray-lt
 
+//refine
+#refine
+	margin: $space-s 0
+
+	//hide all the actual checkboxes
+	ul
+		list-style: none
+
+	input
+		// display: none
+		
+	li
+		display: inline
+	
+	label
+		display: inline
+		font-size: $font-size-s
+		font-weight: $font-weight-medium
+		color: $color-gray-dk
+		//border: 1px solid $color-gray-lt
+		//padding: $space-s $space-m
+		//margin: 0 $space-s 0 0 
+		span
+			padding: 0 0 0 $space-s
+			color: $color-gray-md
+			font-weight: $font-weight-light
+		//&:hover
+			//border: 1px solid $color-gray-md
 
 //filter section
 #filter-options
@@ -109,7 +139,9 @@ img
 	font-size: $font-weight-medium
 	//border: 1px solid $color-brand !important
 
-
+//coupon listing container
+#product-list
+	margin: $space-m 0 0 0
 
 //coupon listings
 .card
@@ -119,17 +151,23 @@ img
 	//%off, sale info, cta
 	height: auto
 	width: auto
-	margin-top: $space-xs
-	border-bottom: 1px solid $color-gray-lt
-	border-radius: 4px
+	background-color: $color-white
+	margin-top: $space-s
+	//border-top: 1px solid $color-gray-lt
+
+	//border-radius: 4px
 	justify-content: center
 	align-items: center
+	padding: $space-s
 
 	.left
-		display: none
+		// display: none
 		//align left
+		//border-right: 1px solid $color-gray-lt
 		margin-right: auto
 		height: auto
+		display: block
+		width: 96px
 		padding: $space-m
 		justify-content: center
 		align-items: center
@@ -137,13 +175,15 @@ img
 
 	.mid
 		//border-left: 1px solid $color-gray-lt
-		padding: $space-m 0 $space-m 0
+		padding: 0 0 $space-s $space-s
 		width: 560px 
 		>:nth-child(1)
 			margin: 0
-		//heading
-		>:nth-child(2)
-			margin: $space-s 0 $space-s 0
+		h2
+			padding: $space-s 0 $space-s 0
+		// //heading
+		// >:nth-child(2)
+		// 	margin: $space-s 0 $space-s 0
 
 
 	.right
@@ -179,6 +219,15 @@ img
 		background-color: $color-blue
 	&.promocode
 		background-color: $color-pink
+	&.groupon
+		background-color: $color-brand
+	&.verified
+		color: $color-black
+		border: 1px solid $color-gray-lt
+	&.exclusive
+		color: $color-brand
+		border: 1px solid $color-brand
+
 
 // font styles
 //page heading
@@ -194,13 +243,22 @@ h2
 	font-weight: $font-weight-light
 	line-height: $line-height-tight
 
+
 //body text on card
 h3
 	font-size: $font-size-s
-	color: $color-gray-md
+	color: $color-gray-dk
 	font-weight: $font-weight-medium
 	ine-height: $line-height-tight
 	margin-bottom: $space-xs
+	
+//% off tag
+.markdown
+	color: $color-black
+	font-size: $font-size-l
+	font-weight: $font-weight-bold
+	line-height: $line-height-tight
+
 //bucksback callout
 h4
 	font-size: $font-size-s
@@ -217,6 +275,8 @@ h5
 sup
 	font-size: $font-size-s
 .highlight
+	//turning off higlight
+	display: none
 	font-weight: $font-weight-bold
 
 .blue

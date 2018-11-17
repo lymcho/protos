@@ -9,6 +9,9 @@
 img {
   display: block; }
 
+body {
+  background-color: #F6F7F8; }
+
 .hotspot {
   width: 200px;
   height: 40px;
@@ -68,6 +71,22 @@ img {
   .leftrail > :nth-child(1) {
     border: 1px solid #D5D8DB; }
 
+#refine {
+  margin: 0.5rem 0; }
+  #refine ul {
+    list-style: none; }
+  #refine li {
+    display: inline; }
+  #refine label {
+    display: inline;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #75787B; }
+    #refine label span {
+      padding: 0 0 0 0.5rem;
+      color: #A5A8AB;
+      font-weight: 300; }
+
 #filter-options {
   margin: 0.5rem 0; }
   #filter-options ul {
@@ -87,31 +106,35 @@ img {
 .selected {
   font-size: 400; }
 
+#product-list {
+  margin: 1rem 0 0 0; }
+
 .card {
   display: flex;
   flex-flow: row nowrap;
   height: auto;
   width: auto;
-  margin-top: 0.25rem;
-  border-bottom: 1px solid #D5D8DB;
-  border-radius: 4px;
+  background-color: #FFFFFF;
+  margin-top: 0.5rem;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding: 0.5rem; }
   .card .left {
-    display: none;
     margin-right: auto;
     height: auto;
+    display: block;
+    width: 96px;
     padding: 1rem;
     justify-content: center;
     align-items: center;
     text-align: center; }
   .card .mid {
-    padding: 1rem 0 1rem 0;
+    padding: 0 0 0.5rem 0.5rem;
     width: 560px; }
     .card .mid > :nth-child(1) {
       margin: 0; }
-    .card .mid > :nth-child(2) {
-      margin: 0.5rem 0 0.5rem 0; }
+    .card .mid h2 {
+      padding: 0.5rem 0 0.5rem 0; }
   .card .right {
     margin-left: auto;
     text-align: center; }
@@ -140,6 +163,14 @@ img {
     background-color: #1795E7; }
   .tags.promocode {
     background-color: #FC2B56; }
+  .tags.groupon {
+    background-color: #53A318; }
+  .tags.verified {
+    color: #333333;
+    border: 1px solid #D5D8DB; }
+  .tags.exclusive {
+    color: #53A318;
+    border: 1px solid #53A318; }
 
 h1 {
   font-size: 2rem;
@@ -154,10 +185,16 @@ h2 {
 
 h3 {
   font-size: 0.875rem;
-  color: #A5A8AB;
+  color: #75787B;
   font-weight: 400;
   ine-height: 1.25;
   margin-bottom: 0.25rem; }
+
+.markdown {
+  color: #333333;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.25; }
 
 h4 {
   font-size: 0.875rem;
@@ -176,6 +213,7 @@ sup {
   font-size: 0.875rem; }
 
 .highlight {
+  display: none;
   font-weight: 600; }
 
 .blue {
