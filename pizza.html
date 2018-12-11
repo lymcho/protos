@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <title>pizza prototype</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://bootswatch.com/cosmo/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/pizza_styles.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+</head>
+<body>
+	<div class="chats">
+		<!-- chats here -->
+	</div>
+	<div class="plugin">
+	<!-- 	<div class="container"> -->
+<!--   <div class="row">
+    <div class="col-sm-7"> -->
+    	<!-- tabs here-->
+      <div class="tabs-left">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#a" data-toggle="tab"><span data-toggle="tooltip" data-placement="right" title="Pizza Dashboard" class="glyphicon glyphicon-home"></span></a></li>
+          <li>
+          	<a href="#c" data-toggle="tab"><span data-toggle="tooltip" data-placement="right" title="Reason Codes" class="glyphicon glyphicon-question-sign"></span></a>
+          </li>
+
+          <li><a href="#d" data-toggle="tab"><span data-toggle="tooltip" data-placement="right" title="Customer Info in Cyclops" class="glyphicon glyphicon-user"></span></a></li>
+          <li><a href="#d" data-toggle="tab"><span data-toggle="tooltip" data-placement="right" title="Recommended Deals"class="glyphicon glyphicon-tag"></span></a></li>
+          <li><a href="#e" data-toggle="tab"><span data-toggle="tooltip" data-placement="right" title="Favorite snippets" class="glyphicon glyphicon-heart"></span></a></li>
+          <li><a href="#f" data-toggle="tab"><span data-toggle="tooltip" data-placement="right" title="Settings" class="glyphicon glyphicon-cog"></span></a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="a">
+
+       			<!-- header -->
+
+		        	<h1>Pizza Snippets</h1>
+		        	<p>mahines@groupon.com</p>
+        	
+        	
+        	<br>
+        		<!-- edit tools -->
+		        	<div class="dropdown right">
+		  				<button id="toolbox" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><label for="dropdown">Edit</label><span class="caret"></span>
+		  				</button>
+						  <ul class="dropdown-menu" aria-labelledby="dLabel">
+						    <li>item1</li>
+						    <li>item2</li>
+						    <li role="separator" class="divider"></li>
+						    <li>item3</li>
+						  </ul>
+					</div>
+				<!-- pizza wheel -->	
+				<div id="circle"><!-- a class="btn btn-lg btn-danger" type="button"  data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">hi</a> -->
+				</div>
+				<div class="form-group">
+    				<label for="exampleFormControlTextarea1">
+    					selected snippet
+    				</label>
+    				<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Press Enter to Send"></textarea>
+  				</div>
+				<br>
+				<!-- search -->
+				<div class="input-group">
+			      <span class="input-group-btn">
+			        <button class="btn btn-default" type="button">Go!</button>
+			      </span>
+			      <input type="text" class="form-control" placeholder="Search for macros...">
+			    </div><!-- /input-group -->
+			 
+			  
+         
+        	
+        	
+          </div>
+
+
+
+
+
+
+
+          <div class="tab-pane" id="b">
+         <!-- panel 2 image mockup here -->
+           
+            <ul class="list-group pull-left">
+              <li class="list-group-item">
+                <h4>Crystals &nbsp; &nbsp;<span class="badge pull-right">100%</span></h4>
+              </li>
+              <li class="list-group-item">
+                <h4>Healing &nbsp; &nbsp;<span class="badge pull-right">90%</span></h4>
+              </li>
+              <li class="list-group-item">
+                <h4>Exploring &nbsp; &nbsp;<span class="badge pull-right">78%</span></h4>
+              </li>
+              <li class="list-group-item">
+                <h4>QiGong &nbsp; &nbsp;<span class="badge pull-right">83%</span></h4>
+              </li>
+              <li class="list-group-item">
+                <h4>Myself &nbsp; &nbsp;<span class="badge pull-right">100%</span>
+                </h4></li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="c">CCCCThirdamuno, ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae.</div>
+          <div class="tab-pane" id="d">DDDDDSecondo sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet augue.</div>
+          <div class="tab-pane" id="e">EEEEEThirdamuno, ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae.</div>
+          <div class="tab-pane" id="f">FFFFFFThirdamuno, ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae.</div>
+        </div><!-- /tab-content -->
+      </div><!-- /tabbable -->
+<!--     </div> --><!-- /col -->
+<!--   </div> --><!-- /row -->
+<!-- </div> --><!-- /container -->
+		
+	</div>
+
+<!-- <script>
+	var tabsFn = (function() {
+  
+  function init() {
+    setHeight();
+  }
+  
+  function setHeight() {
+    var $tabPane = $('.tab-pane'),
+        tabsHeight = $('.nav-tabs').height();
+    
+    $tabPane.css({
+      height: tabsHeight
+    });
+  }
+    
+  $(init);
+})();
+</script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script>
+	$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+	$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+/*  Contexts besides default?
+	- $border-control
+	- $border-container */
+.chats {
+  width: 100%;
+  height: 100vh;
+  display: block;
+  background-color: #ededed; }
+
+.plugin {
+  width: auto;
+  height: 100vh;
+  overflow: scroll;
+  float: right;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  background-color: #fff;
+  display: flex;
+  flex-flow: column nowrap; }
+
+.container {
+  padding: 0 !important; }
+
+html {
+  font-size: 16px;
+  font-family: "Open Sans"; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #ddd; }
+
+h1 {
+  color: #333333;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0; }
+
+h3 {
+  margin-top: 0; }
+
+p {
+  color: #A5A8AB;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25;
+  padding: 0;
+  margin: 0; }
+
+label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #75787B; }
+
+.right {
+  float: right; }
+
+#circle {
+  margin: 0 1rem;
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  background-color: #A5A8AB; }
+
+#toolbox {
+  border: 0; }
+
+.badge {
+  background-color: #777; }
+
+.nav-tabs {
+  float: left;
+  border-bottom: 0;
+  border-right: 1px solid #D5D8DB;
+  height: 100vh; }
+  .nav-tabs li {
+    float: none;
+    margin: 0; }
+    .nav-tabs li a {
+      margin-right: 0;
+      border: 0;
+      border-radius: 0;
+      background-color: #FFFFFF; }
+      .nav-tabs li a:hover {
+        background-color: #fff; }
+  .nav-tabs .glyphicon {
+    color: #D5D8DB; }
+  .nav-tabs .active .glyphicon {
+    color: #75787B; }
+  .nav-tabs > li.active > a {
+    border: 0; }
+    .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+      border: 0; }
+
+.tab-content {
+  margin-left: 0; }
+  .tab-content .tab-pane {
+    display: none;
+    background-color: #fff;
+    padding: 1rem;
+    overflow-y: auto; }
+  .tab-content .active {
+    display: block; }
+
+.list-group {
+  width: 100%; }
+  .list-group .list-group-item {
+    height: 50px; }
+    .list-group .list-group-item h4, .list-group .list-group-item span {
+      line-height: 11px; }
