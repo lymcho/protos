@@ -26,6 +26,10 @@ p {
     .herocta:hover #revealonhover {
       display: inline; }
 
+video {
+  border: 1px solid red;
+  margin-left: 50px; }
+
 @keyframes widen {
   0% {
     width: 130px; }
@@ -41,6 +45,9 @@ p {
   .shiftup:hover {
     margin-top: -4px;
     transition: 0.2s ease-in-out; }
+
+.logo {
+  width: 180px; }
 
 #footerlink {
   display: block;
