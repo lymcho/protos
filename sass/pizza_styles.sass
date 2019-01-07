@@ -1,148 +1,429 @@
-@import "variables.sass"
-.chats
-	width: 100%
-	height: 100vh
-	display: block
-	background-color: #ededed
-.rail
-	overflow: hidden
-	position: fixed
-	right: 439px
-	top: 0
-	z-index: 4
-.plugin
-	width: auto
-	height: 100vh
-	overflow: scroll
-	//display: block
-	float: right
-	position: fixed
-	right: 0
-	top: 0
-	z-index: 3
-	background-color: #fff
-	display: flex
-	flex-flow: column nowrap
-//everythig inside of the plugin
-.container
-	padding: 0 !important
-
+$darkgrey: #333333
+$mediumgrey: #75787B
+$lightgrey: #E6E7E8
+$bggrey: #F6F7F8
+$red: #CC0831
+$green: #367806
+$blue: #317efc
+$yellow: #E08300
+$font-family: open sans
+$appheight: 1206px
 html
-	font-size: 16px
-	font-family: "Open Sans"
-*
-	padding: 0
-	margin: 0
-body
-  background-color: #ddd
+  font-family: $font-family
+  font-size: 10px
+  background: $mediumgrey
   
 
-h1
-	color: $color-black
-	font-size: $font-size-xl
-	font-weight: $font-weight-light
-	line-height: $line-height-base
-	//background-color: blue
-	padding: 0
-	margin: 0
-	
+.rail
+    position: absolute
+    top: 0
+    right: 440px
+    width: 40px
+    background-color: white
+    //height: auto
+    height: $appheight
+    border-right: 1px solid $lightgrey
+    //push right icon
+    i
+      padding: 1.6rem 2rem 1rem 1.6rem
+      color: $mediumgrey
+      cursor: pointer
+      &:hover
+        color: $mediumgrey
+    //circle items in the rail
+    ul
+      li
+        list-style: none
+        height: 3rem
+        line-height: 3rem
+        font-size: 1.2rem
+        text-align: center
+        margin: 0.4rem
+        border: 1px solid $lightgrey
+        border-radius: 2.4rem
+        color: $mediumgrey
+        cursor: pointer
+        &.active
+          color: $darkgrey
+          border: 1px solid $mediumgrey
+        
+        &:hover
+          //border: 1px solid $mediumgrey
+          color: $mediumgrey
+          border: 1px solid $mediumgrey
+        
+//tooltip text from tab1-4
+#tab1
+  &:hover
+    &:before
+      content: "Pizza"
+      font-size: 12px
+      font-family: $font-family
+      padding: 0rem 1rem
+      border-radius: 0.4rem
+      width: auto
+      text-align: center
+      position: absolute
+      right: 48px
+      background: $darkgrey
+      color: white
+      z-index: 1000
+#tab2
+  &:hover
+    &:before
+      content: "Recommended Deals"
+      font-size: 12px
+      line-height: 16px
+      font-family: $font-family
+      padding: 0.4rem 1rem
+      border-radius: 0.4rem
+      width: auto
+      text-align: center
+      position: absolute
+      right: 48px
+      background: $darkgrey
+      color: white
+      z-index: 1000
+#tab3
+  &:hover
+    &:before
+      content: "Promo Codes"
+      font-size: 12px
+      line-height: 16px
+      font-family: $font-family
+      padding: 0.4rem 1rem
+      border-radius: 0.4rem
+      max-width: 120px
+      text-align: center
+      position: absolute
+      right: 48px
+      background: $darkgrey
+      color: white
+      z-index: 1000     
+#tab4
+  &:hover
+    &:before
+      content: "Other Apps"
+      font-size: 12px
+      line-height: 16px
+      font-family: $font-family
+      padding: 0.4rem 1rem
+      border-radius: 0.4rem
+      max-width: 120px
+      text-align: center
+      position: absolute
+      right: 48px
+      background: $darkgrey
+      color: white
+      z-index: 1000
+
+.container
+  border-bottom: 1px solid #ededed
+  max-width: 440px
+  padding: 1.2rem
+  //footer has grey background
+.footer
+  
+  height: auto
+  padding: 0.8rem
+  background-color: $bggrey
+  
+
+
+  
 h3
-  margin-top: 0
+  font-size: 1.2rem
+  color: $mediumgrey
+  line-height: 1.6rem
+  text-transform: uppercase
+  font-weight: 600
+  letter-spacing: 0.02px
 
-	
 p
-	color: $color-gray-md
-	font-size: $font-size-xs
-	font-weight: $font-weight-medium
-	line-height: $line-height-tight
-	padding: 0
-	margin: 0
-	//background-color: blue
-label
-	font-size: $font-size-xs
-	text-transform: uppercase
-	font-weight: $font-weight-bold
-	color: $color-gray-dk
-.right
-	float: right
+  font-size: 1.2rem
+  line-height: 1.6rem
+.cta
+  text-transform: Capitalize
+  font-weight: 400
 
-//cirlce
-$circle-radius: 300px
-#circle
-	margin: 0 1rem
-	width: $circle-radius
-	height: $circle-radius
-	border-radius: $circle-radius
-	background-color: $color-gray-md
+.chat
+  display: inline-block
+  padding: 4px
+  margin: 8px 0 0 0 
+  border-radius: 4px
+  border: 1px solid $green
+
+.hidewheel
+  color: $blue
+  cursor: pointer
+.pizzasection
+  //background-color: blue
+  padding: 0 0 16px 32px
+  display: flex
+  flex-flow: row nowrap
+  vertical-align: center
+  //pizza wheel
+  .pizza
+      position: relative 
+      width: 300px 
+      height: 300px 
+      ul 
+        position: absolute 
+        width: 300px 
+        height: 300px 
+        margin: 0px 
+        padding: 0 
+        list-style: none 
+        border-radius: 50% 
+        overflow: hidden 
+      .center 
+        position: absolute 
+        top: 122px
+        left: 122px
+        width: 56px
+        height: 56px
+        z-index: 1 
+        background: black
+        border-radius: 50% 
+        box-shadow: 0 0 3px #ccc 
+        p
+          color: white
+          font-weight: 600
+          padding: 2.0rem 0 0 1.3rem
+          
+      li 
+        position: absolute 
+        top: -10px 
+        left: -10px 
+        width: 160px 
+        height: 160px 
+        border-bottom: 1px solid $lightgrey
+        color: black
+        background: $bggrey
+        transform-origin: 100% 100% 
+        //each of the wheel
+        overflow: hidden 
+        &:nth-child(1) 
+          transform: rotate(0deg) skew(30deg) 
+        &:nth-child(2) 
+          transform: rotate(60deg) skew(30deg) 
+        &:nth-child(3) 
+          transform: rotate(120deg) skew(30deg) 
+        &:nth-child(4) 
+          transform: rotate(180deg) skew(30deg) 
+        &:nth-child(5) 
+          transform: rotate(240deg) skew(30deg) 
+        &:nth-child(6) 
+          transform: rotate(300deg) skew(30deg) 
+        span 
+          display: block 
+          
+          width: 160px 
+          height: 160px 
+          margin-top: 40px 
+          margin-left: 40px 
+          //background: rgba(241, 196, 15, 0.5) url('monitor-4x.png') no-repeat 50% 40% 
+          transform: skew(-30deg) rotate(-60deg) 
+          transition: background-color 0.5s 
+          &:hover 
+            background-color: $lightgrey
+        
+  
+    
+  .icons
+    padding-left: 1.2rem
+    .icon
+      //background-color: $lightgrey
+      color: $mediumgrey
+      margin: 0 0 8px 0
+      border-radius: 3rem
+      border: 1px solid $lightgrey
+//snippet display area
+.display
+  padding: 8px 0 0 0
+//remove the border in reason code search
+.reasoncode
+  margin: 8px 0 0 0 
+  .icon
+    border: 0
+  p
+    border-radius: 4px
+    padding: 8px
+    background-color: $bggrey
+    border: 1px solid $bggrey
+    margin: 8px 0 0 0
+    cursor: pointer
+    &:hover
+      border: 1px solid $lightgrey
+      transition: 0.2s
+    span
+      padding: 0 0.8rem 0 0 
+      font-weight: 600
+    
+    
+    
+//info overrides
+.info
+  margin: 8px 0 0 0 
+  font-size: 1.2rem
+  font-weight: 400
+  display: flex
+  flex-flow: row nowrap
+  text-align: left
+  //label
+  p
+    font-size: 1.2rem
+    line-height: 2.4rem
+    min-width: 60px
+    
+  //form field
+  .field-body
+    margin-right: 0rem
+    margin-left: 4px
+  .icon
+    margin-left: 0.8rem
+    
+    
+//status icons    
+.status
+  border: 0
+  padding-top: 6px
+  .fa-circle
+    color: $lightgrey
+  .fa-check-circle
+    color: $green
+
+//override form behaviro
+
+#name, #order
+  border: 1px solid blue
+  width: 116px
+#email
+  border: 1px solid blue
+  width: 140px
+  
+  
+
     
 
-//button styles
 
-#toolbox
-	//background-color: blue
-	border: 0
+.lineitems
+    p
+      padding-bottom: 0rem
+      span
+        font-size: 1.2rem
+        line-height: 1.2rem
+        font-weight: 400
 
+        display: inline-block
+        width: 130px
+        vertical-align: top
+        //position: relative
+        //text-align: right
+        padding-left: 4px
+        &.title
+          width: 68px
+          display: inline-block
+          padding-left: 0px
+          text-align: left
+          //background: blue
+        
+      
 
+    
 
+    
+//colors
+.red
+    color: $red
+.green
+    color: $green
+.yellow
+    color: $yellow
+.blue
+    color: $blue
+  
+//fill color
+.is-green
+  background: $green
+  color: white
+//status
 
-//others
-
-
-
-
-
-
-.badge
-  background-color: #777
-
-.tabs-left
-  //margin-top: 3rem
-
-
-.nav-tabs
-  float: left
-  border-bottom: 0
-  border-right: 1px solid $color-gray-lt
-  height: 100vh
-
-  li
-    float: none
-    margin: 0
-    a
-      margin-right: 0
-      border: 0
-      border-radius: 0
-
-      background-color: $color-white
-      &:hover
-        background-color: #fff
-  .glyphicon
-    color: $color-gray-lt
-
-		
-  .active .glyphicon
-    color: $color-gray-dk
-  > li.active > a
+.strong
+    font-weight: 700 !important
+.underline
+    text-decoration: underline
+  
+  
+  
+  
+//dropdown  
+.dropdown-trigger
+  width: 320px
+  padding-left: 6px
+  .icon
     border: 0
-    &:hover, &:focus
-      border: 0
-
-
-
-.tab-content
-  margin-left: 0
-  .tab-pane
-    display: none
-    background-color: #fff
-    padding: 1rem
-
-    overflow-y: auto
-  .active
-    display: block
-
-.list-group
+.dropdown-menu
+  cursor: pointer
+  padding: 0px
+  margin-top: 0.8rem
   width: 100%
-  .list-group-item
-    height: 50px
-    h4, span
-      line-height: 11px
+  
+  .dropdown-content
+    //padding: 8px 8px 16px 8px
+    //margin-top: 0.8rem
+   
+    .dropdown-item
+      margin: 0px
+      padding: 0px
+     
+      //all the children
+      
+      &>*
+        //padding: 8px
+        &:hover
+          background-color: #ededed
+      span
+        line-height: 32px
+        //vertical-align: top
+        padding-left: 0.8rem
+        &:first-of-type
+          //color: blue
+          font-weight: 600
+          width: 64px
+          display: inline-block
+        &.code
+          width: 320px
+          //height: 45px
+          line-height: 32px
+          margin-left: 0.8rem
+          display: inline-block
+          //padding-top: 8px
+          
+          //background-color: pink
+        
+
+.appear
+  display: block
+.hide
+  border: 1px solid blue
+//text area
+.textarea
+  margin: 8px 0
+  font-size: 1.2rem
+  color: $mediumgrey
+  padding: 8px 0 0 4px 
+  overflow: scroll !important
+  height: 100px
+  
+.slide
+  width: 440px
+  height: $appheight
+  position: absolute
+  top: 0
+  right: 0
+  width: 440px
+  background-color: #fff
+  //height: auto
+
+  

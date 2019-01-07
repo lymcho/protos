@@ -4,150 +4,248 @@
 	 <title>pizza prototype</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet"/>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://bootswatch.com/cosmo/bootstrap.min.css" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet"/> -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/pizza_styles.css">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
 </head>
 <body>
-	<div class="chats">
-		<!-- chats here -->
-	</div>
-	<div class="plugin">
-	<!-- 	<div class="container"> -->
-<!--   <div class="row">
-    <div class="col-sm-7"> -->
-    	<!-- tabs here-->
-      <div class="tabs-left">
-        <ul class="nav nav-tabs">
-          <li class="active"><a href="#a" data-toggle="tab"><span data-toggle="tooltip" data-placement="right" title="Pizza Dashboard" class="glyphicon glyphicon-home"></span></a></li>
-          <li>
-          	<a href="#c" data-toggle="tab"><span data-toggle="tooltip" data-placement="right" title="Reason Codes" class="glyphicon glyphicon-question-sign"></span></a>
-          </li>
+<div class="rail" >
 
-          <li><a href="#d" data-toggle="tab"><span data-toggle="tooltip" data-placement="right" title="Customer Info in Cyclops" class="glyphicon glyphicon-user"></span></a></li>
-          <li><a href="#d" data-toggle="tab"><span data-toggle="tooltip" data-placement="right" title="Recommended Deals"class="glyphicon glyphicon-tag"></span></a></li>
-          <li><a href="#e" data-toggle="tab"><span data-toggle="tooltip" data-placement="right" title="Favorite snippets" class="glyphicon glyphicon-heart"></span></a></li>
-          <li><a href="#f" data-toggle="tab"><span data-toggle="tooltip" data-placement="right" title="Settings" class="glyphicon glyphicon-cog"></span></a></li>
+  <i class="fas fa-lg fa-chevron-right pushright"></i>
+
+  <ul>
+    <li class="tab" id="tab1">PZ</li>
+    <li class="tab" id="tab2" data-toggle="tooltip"  data-placement="left" title="Recommended Deals">RD</li>
+    <li class="tab" id="tab3">PR</li>
+    <li class="tab" id="tab4">...</li>
+  </ul>
+
+</div>
+<div class="slide" id="slide1">
+  <!-- current chats -->
+  <div class="container">
+    <h3>current chats</h3>
+    <div class="chat">
+      <p><span>Billybob&nbsp;&nbsp;&nbsp;</span><span>00:45&nbsp;&nbsp;</span><span>00:45&nbsp;</span></p>
+    </div>
+  </div>
+  <!-- pizza wheel -->
+  <div class="container">
+    <h3>Snippets<span class="cta is-pulled-right "><p class="hidewheel" href="">Hide Wheel</p></span></h3>
+    <div class="pizzasection">
+      <!-- pizza wheel  -->
+      <div class="pizza">
+        <div class="center">
+          <p>Back</p>
+        </div>
+        <ul>
+          <li><span>sdfsd</span></li>
+          <li><span>sdfsd </span></li>
+          <li><span>sdfsd </span></li>
+          <li><span>sdfsd </span></li>
+          <li><span>sdfsd </span></li>
+          <li><span>sdfsd </span></li>
         </ul>
-        <div class="tab-content">
-          <div class="tab-pane active" id="a">
+      </div>
 
-       			<!-- header -->
+      <!-- row of icons -->
+      <div class="icons">
+        <br><br>
+        <span class="icon is-large">
+        <i class="fas fa-lg fa-arrows-alt"></i>
+      </span><br>
+        <span class="icon is-large">
+        <i class="fas fa-lg fa-plus"></i>
+      </span><br>
+        <span class="icon is-large">
+        <i class="fas fa-lg fa-minus"></i>
+      </span><br>
+        <span class="icon is-large">
+        <i class="fas fa-lg fa-edit"></i>
+      </span><br>
+        <span class="icon is-large">
+        <i class="fas fa-lg fa-download"></i>
+      </span><br>
+        <span class="icon is-large">
+        <i class="fas fa-lg fa-home"></i>
+      </span><br>
+      </div>
+    </div>
 
-		        	<h1>Pizza Snippets</h1>
-		        	<p>mahines@groupon.com</p>
-        	
-        	
-        	<br>
-        		<!-- edit tools -->
-		        	<div class="dropdown right">
-		  				<button id="toolbox" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><label for="dropdown">Edit</label><span class="caret"></span>
-		  				</button>
-						  <ul class="dropdown-menu" aria-labelledby="dLabel">
-						    <li>item1</li>
-						    <li>item2</li>
-						    <li role="separator" class="divider"></li>
-						    <li>item3</li>
-						  </ul>
-					</div>
-				<!-- pizza wheel -->	
-				<div id="circle"><!-- a class="btn btn-lg btn-danger" type="button"  data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">hi</a> -->
-				</div>
-				<div class="form-group">
-    				<label for="exampleFormControlTextarea1">
-    					selected snippet
-    				</label>
-    				<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Press Enter to Send"></textarea>
-  				</div>
-				<br>
-				<!-- search -->
-				<div class="input-group">
-			      <span class="input-group-btn">
-			        <button class="btn btn-default" type="button">Go!</button>
-			      </span>
-			      <input type="text" class="form-control" placeholder="Search for macros...">
-			    </div><!-- /input-group -->
-			 
-			  
-         
-        	
-        	
+    <!--   snippet display area -->
+
+    <div class="display">
+      <!--   text area -->
+      <div class="control">
+        <textarea class="textarea" readonly>
+   Find a Snippet Using Pizza or Macro...
+   
+  </textarea>
+      </div>
+      <!--   search macro -->
+      <div class="dropdown is-down">
+        <!--   button -->
+        <div href="" class="button is-medium is-black">Copy to Chat</div>
+        <div class="dropdown-trigger">
+          <div class="control has-icons-right">
+            <input class="input is-medium" type="text" placeholder="Search Macro">
+            <span class="icon is-small is-right">
+        <i class="fas fa-search"></i>
+      </span>
           </div>
-
-
-
-
-
-
-
-          <div class="tab-pane" id="b">
-         <!-- panel 2 image mockup here -->
-           
-            <ul class="list-group pull-left">
-              <li class="list-group-item">
-                <h4>Crystals &nbsp; &nbsp;<span class="badge pull-right">100%</span></h4>
-              </li>
-              <li class="list-group-item">
-                <h4>Healing &nbsp; &nbsp;<span class="badge pull-right">90%</span></h4>
-              </li>
-              <li class="list-group-item">
-                <h4>Exploring &nbsp; &nbsp;<span class="badge pull-right">78%</span></h4>
-              </li>
-              <li class="list-group-item">
-                <h4>QiGong &nbsp; &nbsp;<span class="badge pull-right">83%</span></h4>
-              </li>
-              <li class="list-group-item">
-                <h4>Myself &nbsp; &nbsp;<span class="badge pull-right">100%</span>
-                </h4></li>
-            </ul>
+        </div>
+        <div class="dropdown-menu" role="menu">
+          <div class="dropdown-content">
+            <div class="dropdown-item">
+              <p><span>B.F3</span><span class="code">Sold Out /  Not Available</span></p>
+              <p><span>B.A3</span><span class="code">Deals Still Available (4ML)</span></p>
+              <p><span>B.G8a</span><span class="code">Need More Information About the Issue</span></p>
+              <p><span>B.A18b</span><span class="code">Live Deal Edit Request (No Follow Up Needed)</span></p>
+              <p><span>N.S8</span><span class="code">Request Screenshot for Troubleshooting</span></p>
+              <p><span>Gg.B9b</span><span class="code">Addres Not Accepted (Pre-Purchase)</span></p>
+              <p><span>Gg.B1c</span><span class="code">Suggested Address Format</span></p>
+              <p><span>Gg.B9c</span><span class="code">Valid Address Needed, Contact USPS or Canada Post</span></p>
+            </div>
           </div>
-          <div class="tab-pane" id="c">CCCCThirdamuno, ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae.</div>
-          <div class="tab-pane" id="d">DDDDDSecondo sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet augue.</div>
-          <div class="tab-pane" id="e">EEEEEThirdamuno, ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae.</div>
-          <div class="tab-pane" id="f">FFFFFFThirdamuno, ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae.</div>
-        </div><!-- /tab-content -->
-      </div><!-- /tabbable -->
-<!--     </div> --><!-- /col -->
-<!--   </div> --><!-- /row -->
-<!-- </div> --><!-- /container -->
-		
-	</div>
+        </div>
+      </div>
 
-<!-- <script>
-	var tabsFn = (function() {
-  
-  function init() {
-    setHeight();
-  }
-  
-  function setHeight() {
-    var $tabPane = $('.tab-pane'),
-        tabsHeight = $('.nav-tabs').height();
-    
-    $tabPane.css({
-      height: tabsHeight
-    });
-  }
-    
-  $(init);
-})();
-</script> -->
+    </div>
+  </div>
+
+  <!-- reason code-->
+  <div class="container">
+    <div class="columns is-mobile">
+      <div class="column is-6">
+        <!--       panel top -->
+        <h3>reason code<span class="cta is-pulled-right"><a href="">reset</a></span><span class="cta is-pulled-right"></span></h3>
+
+        <div class="control has-icons-right reasoncode">
+          <input class="input is-medium" type="text" placeholder="Search Reason Code">
+          <span class="icon is-small is-right">
+        <i class="fas fa-search"></i>
+      </span>
+          <p><span>1</span>Groupon Not Yet Purchased</p>
+          <p><span>2</span>Groupon Purchased and NOT USED</p>
+          <p><span>3</span>Groupon Account / Subscription</p>
+          <p><span>4</span>Non-Customer Related</p>
+        </div>
+
+      </div>
+      <!--    info -->
+      <div class="column is-6">
+        <h3>INfo<span class="cta is-pulled-right"><a href="">wrap Up&nbsp;&nbsp;</a><a href="">Cyclops&nbsp;&nbsp;</a><a href="">reset</a></span></h3>
+        <div class="field is-horizontal info">
+          <!--           name -->
+          <p>CX Name</p>
+          <!--           form field-->
+          <div class="field-body">
+            <div class="field">
+              <p class="control">
+                <input class="input is-medium" value="Billbob King" readonly>
+              </p>
+            </div>
+
+          </div>
+          <!--         icons -->
+          <span class="icon is-medium status">
+                  <i class="fas fa-2x fa-circle"></i>
+                </span>
+        </div>
+        <div class="field is-horizontal info">
+          <p>CX Email</p>
+          <div class="field-body">
+            <div class="field">
+              <input class="input is-medium" value="billy@gmail.com" readonly>
+
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal info">
+          <p>Order ID</p>
+          <div class="field-body">
+            <div class="field">
+              <p class="control has-icons-right ">
+
+                <input class="input is-medium" value="123828374" readonly><span class="icon is-small is-right">
+        <i class="fas fa-sort-down"></i>
+      </span>
+              </p>
+
+            </div>
+
+          </div>
+          <span class="icon is-medium status">
+        <i class="fas fa-2x fa-check-circle"></i>
+      </span>
+
+        </div>
+        <div class="lineitems">
+          <!--        line items -->
+          <p><span class="title">Status</span><span class="green">Changed</span></p>
+          <p><span class="title">Deal Alert</span><span class="red underline">Alert Present</span></p>
+          <p><span class="title">LOB</span><span>Local</span></p>
+          <p><span class="title strong">Final Sale</span><span class="green">No</span></p>
+          <p><span class="title">Redemption</span><span class="yellow">Redeemed</span></p>
+          <p><span class="title">Ineligible</span><span class="red">Changed</span></p>
+          <p><span class="title">Purchased</span><span>92 Days ago</span></p>
+          <p>
+            <Span class="title">Expiry In</Span><span class="green">29 days</span></p>
+          <p><span class="title">OFP</span><span>Credit Card</span></p>
+          <p><span class="title">Deal Price</span><span>89.00</span></p>
+          <p><span class="title">Discount</span><span>0.00</span></p>
+          <p><span class="title">Total Paid</span><span>89.00</span></p>
+          <p><span class="title">Permalink</span><span class="blue"><a href="">amarimo-massage-houstin-city-234</a></span></p>
+          <p><span class="title">Tracking</span><span> </span></p>
+          <p><span class="title">Chat</span><span class="blue"><a href="">897419283719283753</a></span></p>
+          <p>
+            <Span class="title">Promotion</Span><span class="green underline">PROMO</span></p>
+        </div>
+      </div>
+    </div>
+    <!--  tool name and login -->
+
+  </div>
+  <div class="footer">
+    <p>Pizza tool v 2.3<span class="is-pulled-right">lzhou@groupon.com&nbsp;&nbsp;<a>Log Out</a></span></p>
+
+  </div>
+  </div>
+<!--  end of pizza plugin -->
+
+<!-- slide 2  -->
+<div class="slide" id="slide2">
+  <figure class="image">
+    <img src="https://cdn.pbrd.co/images/HVn4ygx.png" alt="">
+  </figure>
+</div>
+
+<!-- slide 3  -->
+<div class="slide" id="slide3">
+  <figure class="image">
+    <img src="https://cdn.pbrd.co/images/HVn1qwr.png" alt="">
+  </figure>
+</div>
+<!-- slide 4  -->
+<div class="slide" id="slide4">
+<!--   <figure class="image">
+    <img src="https://cdn.pbrd.co/images/HVn1qwr.png" alt="">
+  </figure> -->
+</div>
+
+
+
+
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+ -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script>
-	$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-	$(function () {
-  $('[data-toggle="popover"]').popover()
-})
-</script>
-
-
+<script src="js/pizza.js"></script>
 
 </body>
 
