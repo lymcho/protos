@@ -1,5 +1,5 @@
 html {
-  font-family: open sans;
+  font-family: "Open Sans", sans-serif !important;
   font-size: 10px;
   background: #75787B; }
 
@@ -42,7 +42,7 @@ html {
 #tab1:hover:before {
   content: "Pizza";
   font-size: 12px;
-  font-family: open sans;
+  font-family: "Open Sans", sans-serif;
   padding: 0rem 1rem;
   border-radius: 0.4rem;
   width: auto;
@@ -57,7 +57,7 @@ html {
   content: "Recommended Deals";
   font-size: 12px;
   line-height: 16px;
-  font-family: open sans;
+  font-family: "Open Sans", sans-serif;
   padding: 0.4rem 1rem;
   border-radius: 0.4rem;
   width: auto;
@@ -72,7 +72,7 @@ html {
   content: "Promo Codes";
   font-size: 12px;
   line-height: 16px;
-  font-family: open sans;
+  font-family: "Open Sans", sans-serif;
   padding: 0.4rem 1rem;
   border-radius: 0.4rem;
   max-width: 120px;
@@ -364,7 +364,8 @@ p {
   background-color: #fff; }
 
 .deal {
-  padding: 1.6rem 0 1.6rem 0; }
+  padding: 1.6rem 0 1.6rem 0;
+  font-family: "Open Sans", sans-serif !important; }
   .deal .button {
     margin-right: 0.4rem !important; }
   .deal p {

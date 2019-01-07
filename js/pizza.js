@@ -63,18 +63,36 @@ hidewheel.addEventListener('click', function (event) {
   
 var pushright = document.querySelector(".pushright") //pushright icon
 var rail = document.querySelector(".rail") //rail
-var plugin= document.querySelector("#slide1") //area to hide
+var plugin= document.querySelectorAll(".slide") //area to hide
+
 
 
 pushright.addEventListener('click', function (event) {
-      if (plugin.style.display == "") {
-         plugin.style.display = "none";
+      if (plugin[0].style.display == "") {
+         plugin[0].style.display = "none";
         rail.style.right="0px";
         pushright.classList.remove("fa-chevron-right");
         pushright.classList.add("fa-chevron-left");
           //hidewheel.innerHTML = "Show Wheel";
       } else {
-          plugin.style.display = "";
+          plugin[0].style.display = "";
+        rail.style.right="440px";
+         pushright.classList.remove("fa-chevron-left");
+        pushright.classList.add("fa-chevron-right");
+        
+        // hidewheel.innerHTML = "Hide Wheel";
+      }
+    }
+  );
+pushright.addEventListener('click', function (event) {
+      if (plugin[1].style.display == "") {
+         plugin[1].style.display = "none";
+        rail.style.right="0px";
+        pushright.classList.remove("fa-chevron-right");
+        pushright.classList.add("fa-chevron-left");
+          //hidewheel.innerHTML = "Show Wheel";
+      } else {
+          plugin[1].style.display = "";
         rail.style.right="440px";
          pushright.classList.remove("fa-chevron-left");
         pushright.classList.add("fa-chevron-right");
