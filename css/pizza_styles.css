@@ -3,6 +3,9 @@ html {
   font-size: 10px;
   background: #75787B; }
 
+::-webkit-scrollbar {
+  display: none; }
+
 .rail {
   position: fixed;
   top: 0;
@@ -116,7 +119,7 @@ p {
   padding: 4px;
   margin: 8px 0 0 0;
   border-radius: 4px;
-  border: 1px solid #75787B; }
+  border: 1px solid #E6E7E8; }
   .chat.active {
     border: 1px solid #367806; }
 
@@ -279,6 +282,22 @@ p {
 .blue {
   color: #317efc; }
 
+.is-outlined-green {
+  border: 1px solid #367806;
+  color: #367806; }
+  .is-outlined-green:hover {
+    color: white;
+    background-color: #367806;
+    border: 1px solid #367806; }
+
+.is-outlined-red {
+  border: 1px solid #CC0831;
+  color: #CC0831; }
+  .is-outlined-red:hover {
+    color: white;
+    background-color: #CC0831;
+    border: 1px solid #CC0831; }
+
 .is-green {
   background: #367806;
   color: white; }
@@ -288,6 +307,9 @@ p {
 
 .underline {
   text-decoration: underline; }
+
+.strike {
+  text-decoration: line-through; }
 
 .dropdown-trigger {
   width: 320px;
@@ -340,3 +362,16 @@ p {
   right: 0;
   width: 440px;
   background-color: #fff; }
+
+.deal {
+  padding: 1.6rem 0 1.6rem 0; }
+  .deal .button {
+    margin-right: 0.4rem !important; }
+  .deal p {
+    font-size: 12px; }
+    .deal p:nth-of-type(1) {
+      color: #333333;
+      line-height: 16px;
+      margin-bottom: 0.4rem; }
+    .deal p:nth-of-type(2) {
+      color: #75787B; }

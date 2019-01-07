@@ -12,7 +12,8 @@ html
   	font-family: $font-family
   	font-size: 10px
   	background: $mediumgrey
-
+::-webkit-scrollbar
+	display: none
 
 // ::-webkit-scrollbar 
 //     width: 0px
@@ -161,7 +162,7 @@ p
   padding: 4px
   margin: 8px 0 0 0 
   border-radius: 4px
-  border: 1px solid $mediumgrey
+  border: 1px solid $lightgrey
   &.active
   	border: 1px solid $green
 
@@ -354,18 +355,37 @@ p
     color: $yellow
 .blue
     color: $blue
+//color overrides
+.is-outlined-green
+	border: 1px solid $green
+	color: $green
+	&:hover
+		color: white
+		background-color: $green
+		border: 1px solid $green
+.is-outlined-red
+	border: 1px solid $red
+	color: $red
+	&:hover
+		color: white
+		background-color: $red
+		border: 1px solid $red
+
   
 //fill color
 .is-green
   background: $green
   color: white
+
 //status
 
 .strong
     font-weight: 700 !important
 .underline
     text-decoration: underline
-  
+.strike
+	text-decoration: line-through
+
   
   
   
@@ -438,6 +458,18 @@ p
   background-color: #fff
   //height: auto
 
-// //promo table
-// .table
-//   margin: 1rem !important  
+//deals
+.deal
+	padding: 1.6rem 0 1.6rem 0
+	.button
+		margin-right: 0.4rem !important
+	p
+	 	font-size: 12px
+	 	&:nth-of-type(1)
+	 		color: $darkgrey
+	 		line-height: 16px
+	 		margin-bottom: 0.4rem
+	 	&:nth-of-type(2)
+	 		color: $mediumgrey
+	
+	 
