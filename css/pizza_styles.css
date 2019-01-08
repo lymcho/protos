@@ -13,7 +13,7 @@ html {
   width: 40px;
   z-index: 1000;
   background-color: white;
-  height: 1406px;
+  height: 1506px;
   border-right: 1px solid #E6E7E8;
   border-top: 1px solid #E6E7E8; }
   .rail i {
@@ -489,7 +489,7 @@ p {
 
 .slide {
   width: 440px;
-  height: 1406px;
+  height: 1506px;
   font-size: 1.2rem;
   font-family: "Open Sans", sans-serif;
   position: absolute;
