@@ -348,13 +348,13 @@ p
     
 //colors
 .red
-    color: $red
+    color: $red !important
 .green
-    color: $green
+    color: $green !important
 .yellow
-    color: $yellow
+    color: $yellow !important
 .blue
-    color: $blue
+    color: $blue !important
 //color overrides
 .is-outlined-green
 	border: 1px solid $green
@@ -376,6 +376,16 @@ p
 .is-green
   background: $green
   color: white
+.is-red
+  background: $red
+  color: white
+.is-blue
+  background: $blue
+  color: white
+.is-grey
+  background: $mediumgrey
+  color: white
+
 
 //status
 
@@ -451,6 +461,8 @@ p
 .slide
   width: 440px
   height: $appheight
+  font-size: 1.2rem
+  font-family: $font-family
   position: absolute
   top: 0
   right: 0
@@ -473,5 +485,21 @@ p
 	 		margin-bottom: 0.4rem
 	 	&:nth-of-type(2)
 	 		color: $mediumgrey
-	
+//promo
+.legend
+	span
+		color: $darkgrey
+		padding-right: 0.8rem
+		display: block
+		span
+			display: inline
+			color: transparent
+			font-size: 8px
+			line-height: 0.2rem
+			width: 1rem
+			height: 1rem
+			border-radius: 0.4rem
+			margin-right: 0.4rem
+
+
 	 

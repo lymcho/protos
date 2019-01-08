@@ -271,16 +271,16 @@ p {
       text-align: left; }
 
 .red {
-  color: #CC0831; }
+  color: #CC0831 !important; }
 
 .green {
-  color: #367806; }
+  color: #367806 !important; }
 
 .yellow {
-  color: #E08300; }
+  color: #E08300 !important; }
 
 .blue {
-  color: #317efc; }
+  color: #317efc !important; }
 
 .is-outlined-green {
   border: 1px solid #367806;
@@ -300,6 +300,18 @@ p {
 
 .is-green {
   background: #367806;
+  color: white; }
+
+.is-red {
+  background: #CC0831;
+  color: white; }
+
+.is-blue {
+  background: #317efc;
+  color: white; }
+
+.is-grey {
+  background: #75787B;
   color: white; }
 
 .strong {
@@ -357,6 +369,8 @@ p {
 .slide {
   width: 440px;
   height: 1406px;
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
   position: absolute;
   top: 0;
   right: 0;
@@ -376,3 +390,17 @@ p {
       margin-bottom: 0.4rem; }
     .deal p:nth-of-type(2) {
       color: #75787B; }
+
+.legend span {
+  color: #333333;
+  padding-right: 0.8rem;
+  display: block; }
+  .legend span span {
+    display: inline;
+    color: transparent;
+    font-size: 8px;
+    line-height: 0.2rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.4rem;
+    margin-right: 0.4rem; }
