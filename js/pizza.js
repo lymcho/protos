@@ -31,7 +31,7 @@ for(var i=0; i<button.length+1;i++){
 
 
 
-//macro 
+//macro when start typing the drop down comes out
 var button = document.querySelector(".dropdown-trigger")
 var menu = document.querySelector(".dropdown-menu")
 

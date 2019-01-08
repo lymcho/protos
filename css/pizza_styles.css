@@ -6,6 +6,12 @@ html {
 ::-webkit-scrollbar {
   display: none; }
 
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1400px; }
+
 .rail {
   position: absolute;
   top: 0;
