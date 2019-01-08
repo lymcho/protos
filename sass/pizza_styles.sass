@@ -21,10 +21,12 @@ html
 
 
 .rail
-    position: fixed
+    position: absolute
     top: 0
     right: 440px
     width: 40px
+    z-index: 1000
+
     background-color: white
     //height: auto
     height: $appheight
@@ -396,7 +398,11 @@ p
 .strike
 	text-decoration: line-through
 
-  
+//visibility
+.is-visible
+	display: block
+.is-invisible
+	display: none 
   
   
 //dropdown  

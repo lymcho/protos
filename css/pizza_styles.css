@@ -7,10 +7,11 @@ html {
   display: none; }
 
 .rail {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 440px;
   width: 40px;
+  z-index: 1000;
   background-color: white;
   height: 1406px;
   border-right: 1px solid #E6E7E8;
@@ -322,6 +323,12 @@ p {
 
 .strike {
   text-decoration: line-through; }
+
+.is-visible {
+  display: block; }
+
+.is-invisible {
+  display: none; }
 
 .dropdown-trigger {
   width: 320px;

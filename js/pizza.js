@@ -31,9 +31,6 @@ for(var i=0; i<button.length+1;i++){
 
 
 
-
-
-
 //macro 
 var button = document.querySelector(".dropdown-trigger")
 var menu = document.querySelector(".dropdown-menu")
@@ -59,7 +56,7 @@ hidewheel.addEventListener('click', function (event) {
     }
   );
 
-//click on push right icon to toggle visibility of plugin
+// //click on push right icon to toggle visibility of plugin
   
 var pushright = document.querySelector(".pushright") //pushright icon
 var rail = document.querySelector(".rail") //rail
@@ -68,23 +65,28 @@ var plugin= document.querySelectorAll(".slide") //area to hide
 
 
 pushright.addEventListener('click', function (event) {
-      if (plugin[0].style.display == "") {
+      if (plugin[0].style.display == "block") {
          plugin[0].style.display = "none";
         rail.style.right="0px";
-        pushright.classList.remove("fa-chevron-right");
-        pushright.classList.add("fa-chevron-left");
-          //hidewheel.innerHTML = "Show Wheel";
+        // pushright.classList.remove("fa-chevron-right");
+        // pushright.classList.add("fa-chevron-left");
+         
       } else {
-          plugin[0].style.display = "";
+          plugin[0].style.display = "block";
         rail.style.right="440px";
-         pushright.classList.remove("fa-chevron-left");
-        pushright.classList.add("fa-chevron-right");
+        //  pushright.classList.remove("fa-chevron-left");
+        // pushright.classList.add("fa-chevron-right");
         
-        // hidewheel.innerHTML = "Hide Wheel";
+     
       }
     }
   );
-
+//use is visible method
+// pushright.addEventListener('click', function (event) {
+//       plugin[0].classList.toggle("is-invisible");
+//       rail.style.right="0px";
+//     }
+//   );
 
 
 
