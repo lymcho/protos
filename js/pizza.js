@@ -84,23 +84,7 @@ pushright.addEventListener('click', function (event) {
       }
     }
   );
-pushright.addEventListener('click', function (event) {
-      if (plugin[1].style.display == "") {
-         plugin[1].style.display = "none";
-        rail.style.right="0px";
-        pushright.classList.remove("fa-chevron-right");
-        pushright.classList.add("fa-chevron-left");
-          //hidewheel.innerHTML = "Show Wheel";
-      } else {
-          plugin[1].style.display = "";
-        rail.style.right="440px";
-         pushright.classList.remove("fa-chevron-left");
-        pushright.classList.add("fa-chevron-right");
-        
-        // hidewheel.innerHTML = "Hide Wheel";
-      }
-    }
-  );
+
 
 
 
@@ -154,5 +138,12 @@ code[7].addEventListener("click", function(){
   textarea.innerHTML="It looks like the address you're attempting includes the word Box, which may be confusing our system since we are currently not able to ship to P.O boxes. I recommend modifying Box to Bx then try again.";
 });
 
-    
+//clicking "copy to chat" clears the input field
+function clearFields(){
+  document.querySelector("#searchmacro").value="";
+}
+var copytochat = document.querySelector("#copytochat")
+copytochat.addEventListener("click", function(){
+  clearFields();
+});
 
