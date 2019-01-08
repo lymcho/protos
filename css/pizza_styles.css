@@ -136,7 +136,8 @@ p {
   .pizzasection .pizza {
     position: relative;
     width: 300px;
-    height: 300px; }
+    height: 300px;
+    cursor: pointer; }
     .pizzasection .pizza ul {
       position: absolute;
       width: 300px;
@@ -217,18 +218,8 @@ p {
         transform: rotate(240deg) skew(30deg); }
       .pizzasection .pizza li:nth-child(6) {
         transform: rotate(300deg) skew(30deg); }
-      .pizzasection .pizza li span {
-        display: block;
-        color: blue;
-        font-size: 30px;
-        width: 160px;
-        height: 160px;
-        margin-top: 40px;
-        margin-left: 40px;
-        transform: skew(-30deg) rotate(-60deg);
-        transition: background-color 0.5s; }
-        .pizzasection .pizza li span:hover {
-          background-color: #E6E7E8; }
+      .pizzasection .pizza li:hover {
+        background-color: #E6E7E8; }
   .pizzasection .icons {
     padding-left: 1.2rem; }
     .pizzasection .icons .icon {

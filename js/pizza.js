@@ -140,6 +140,17 @@ code[7].addEventListener("click", function(){
   textarea.innerHTML="It looks like the address you're attempting includes the word Box, which may be confusing our system since we are currently not able to ship to P.O boxes. I recommend modifying Box to Bx then try again.";
 });
 
+//clicking on pizza slice 6 to enter text
+var slice6= document.querySelector(".slice6")
+slice6.addEventListener("click", function(){
+  switchText(1);        
+  textarea.innerHTML="Please allow me a moment to look into this for you.";
+});
+
+
+
+
+
 //clicking "copy to chat" clears the input field
 function clearFields(){
   document.querySelector("#searchmacro").value="";
