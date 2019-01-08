@@ -149,3 +149,19 @@ copytochat.addEventListener("click", function(){
   clearFields();
 });
 
+
+//clicking on order id drop shows a pic
+
+var showOrder = document.querySelector("#showOrder");
+var orders = document.querySelector(".orders");
+
+showOrder.addEventListener("click", function(){
+  orders.classList.toggle("is-invisible");
+});
+
+
+
+
+
+
+

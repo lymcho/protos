@@ -411,3 +411,9 @@ p {
     height: 1rem;
     border-radius: 0.4rem;
     margin-right: 0.4rem; }
+
+.orders {
+  position: absolute;
+  z-index: 4000;
+  top: 14rem;
+  left: 6rem; }
