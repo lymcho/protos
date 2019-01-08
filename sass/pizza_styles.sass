@@ -190,7 +190,50 @@ p
         padding: 0 
         list-style: none 
         border-radius: 50% 
-        overflow: hidden 
+        overflow: hidden
+      .text
+
+        width: 1rem
+        color: $darkgrey
+        font-weight: bold
+        &.slice1
+   
+        	position: absolute
+        	top: 8rem
+        	left: 4rem
+        	z-index: 5000
+        &.slice2
+        
+        	position: absolute
+        	top: 3rem
+        	left: 13rem
+        	z-index: 5000
+        &.slice3
+        	position: absolute
+        	top: 9rem
+        	left: 22rem
+        	z-index: 5001
+        &.slice4
+        	
+        	position: absolute
+        	top: 18rem
+        	left: 3rem
+        	z-index: 5000
+        &.slice5
+        
+        	position: absolute
+        	top: 22rem
+        	left: 13rem
+        	z-index: 5000
+        &.slice6
+        	
+        	position: absolute
+        	top: 18rem
+        	left: 21rem
+        	z-index: 5000
+
+
+        	
       .center 
         position: absolute 
         top: 122px
@@ -218,6 +261,7 @@ p
         transform-origin: 100% 100% 
         //each of the wheel
         overflow: hidden 
+        //text that lives outside of the slice
         &:nth-child(1) 
           transform: rotate(0deg) skew(30deg) 
         &:nth-child(2) 
@@ -232,7 +276,8 @@ p
           transform: rotate(300deg) skew(30deg) 
         span 
           display: block 
-          
+          color: blue
+          font-size: 30px 
           width: 160px 
           height: 160px 
           margin-top: 40px 

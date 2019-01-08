@@ -146,6 +146,40 @@ p {
       list-style: none;
       border-radius: 50%;
       overflow: hidden; }
+    .pizzasection .pizza .text {
+      width: 1rem;
+      color: #333333;
+      font-weight: bold; }
+      .pizzasection .pizza .text.slice1 {
+        position: absolute;
+        top: 8rem;
+        left: 4rem;
+        z-index: 5000; }
+      .pizzasection .pizza .text.slice2 {
+        position: absolute;
+        top: 3rem;
+        left: 13rem;
+        z-index: 5000; }
+      .pizzasection .pizza .text.slice3 {
+        position: absolute;
+        top: 9rem;
+        left: 22rem;
+        z-index: 5001; }
+      .pizzasection .pizza .text.slice4 {
+        position: absolute;
+        top: 18rem;
+        left: 3rem;
+        z-index: 5000; }
+      .pizzasection .pizza .text.slice5 {
+        position: absolute;
+        top: 22rem;
+        left: 13rem;
+        z-index: 5000; }
+      .pizzasection .pizza .text.slice6 {
+        position: absolute;
+        top: 18rem;
+        left: 21rem;
+        z-index: 5000; }
     .pizzasection .pizza .center {
       position: absolute;
       top: 122px;
@@ -185,6 +219,8 @@ p {
         transform: rotate(300deg) skew(30deg); }
       .pizzasection .pizza li span {
         display: block;
+        color: blue;
+        font-size: 30px;
         width: 160px;
         height: 160px;
         margin-top: 40px;
