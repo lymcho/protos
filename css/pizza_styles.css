@@ -1,7 +1,7 @@
 html {
   font-family: "Open Sans", sans-serif !important;
   font-size: 10px;
-  background: #75787B; }
+  background: #F9F7F9; }
 
 ::-webkit-scrollbar {
   display: none; }
@@ -10,7 +10,8 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  width: 1400px; }
+  width: 1400px;
+  overflow: scroll; }
 
 .rail {
   position: absolute;
@@ -376,7 +377,8 @@ p {
   width: 140px; }
 
 .lineitems p {
-  padding-bottom: 0rem; }
+  padding-bottom: 0rem;
+  margin: 0; }
   .lineitems p span {
     font-size: 1.2rem;
     line-height: 1.2rem;
@@ -386,7 +388,7 @@ p {
     vertical-align: top;
     padding-left: 4px; }
     .lineitems p span.title {
-      width: 68px;
+      width: 70px;
       display: inline-block;
       padding-left: 0px;
       text-align: left; }

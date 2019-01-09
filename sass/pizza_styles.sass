@@ -11,7 +11,8 @@ $appheight: 1506px
 html
   	font-family: $font-family !important
   	font-size: 10px
-  	background: $mediumgrey
+  	//color of the chat screen software bg
+  	background: #F9F7F9 
   	// background-image: url("")
   	// background-size: 1200px 
   	// background-repeat: no-repeat
@@ -27,6 +28,8 @@ html
 	top: 0
 	left: 0
 	width: 1400px
+	overflow: scroll
+
 .rail
     position: absolute
     top: 0
@@ -464,8 +467,12 @@ p
 
 
 .lineitems
-    p
+
+	//background: blue
+	p
       padding-bottom: 0rem
+      margin: 0
+
       span
         font-size: 1.2rem
         line-height: 1.2rem
@@ -478,7 +485,7 @@ p
         //text-align: right
         padding-left: 4px
         &.title
-          width: 68px
+          width: 70px
           display: inline-block
           padding-left: 0px
           text-align: left
