@@ -37,6 +37,7 @@ var menu = document.querySelector(".dropdown-menu")
 
 button.addEventListener("input",function(){
 	// console.log("hi")
+   //menu.classList.remove("is-invisible");
 	menu.classList.toggle("appear");
 	
 });
@@ -154,10 +155,24 @@ slice6.addEventListener("click", function(){
 //clicking "copy to chat" clears the input field
 function clearFields(){
   document.querySelector("#searchmacro").value="";
+  //menu.classList.add("is-invisible");
+}
+
+function closeDropdown(){
+  menu.classList.toggle("appear");
+  
+}
+
+//clicking "copy to chat" also pupulates #chat element 
+function populateChat(){
+  document.querySelector("#chat").innerHTML=textarea.innerHTML;
 }
 var copytochat = document.querySelector("#copytochat")
+
 copytochat.addEventListener("click", function(){
   clearFields();
+  closeDropdown();
+  populateChat();
 });
 
 
