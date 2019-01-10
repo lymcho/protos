@@ -38,7 +38,7 @@ var menu = document.querySelector(".dropdown-menu")
 button.addEventListener("input",function(){
 	// console.log("hi")
    //menu.classList.remove("is-invisible");
-	menu.classList.toggle("appear");
+	menu.classList.add("appear");
 	
 });
 
@@ -159,7 +159,7 @@ function clearFields(){
 }
 
 function closeDropdown(){
-  menu.classList.toggle("appear");
+  menu.classList.remove("appear");
   
 }
 

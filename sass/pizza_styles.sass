@@ -9,110 +9,112 @@ $yellow: #E08300
 $font-family: 'Open Sans', sans-serif
 $appheight: 1506px
 html
-  	font-family: $font-family !important
-  	font-size: 10px
-  	//color of the chat screen software bg
-  	background: #F9F7F9 
-  	// background-image: url("")
-  	// background-size: 1200px 
-  	// background-repeat: no-repeat
+    font-family: $font-family !important
+    font-size: 10px
+    //color of the chat screen software bg
+    background: #F9F7F9 
 ::-webkit-scrollbar
-	display: none
+    display: none
 
 // ::-webkit-scrollbar 
 //     width: 0px
 //     background: transparent /* make scrollbar transparent */
 
+@mixin font
+    font-family: $font-family
+
+
+
+
+
 .background
-	position: fixed
-	top: 0
-	left: 0
-	width: 1400px
-	overflow: scroll
-	#chat
-		position: absolute
-		top: 630px
-		left: 360px
-		max-width: 440px
-		font-size: 12px
-		font-family: $font-family
-		//background: red
-		//color: white
+    position: fixed
+    top: 0
+    left: 0
+    width: 1400px
+    overflow: scroll
+    #chat
+        position: absolute
+        top: 630px
+        left: 360px
+        max-width: 440px
+        font-size: 12px
+        //@extend %font
+        //background: red
+        //color: white
 
 
 .rail
-    position: absolute
+    position: fixed
     top: 0
     right: 440px
     width: 40px
     z-index: 1000
-
     background-color: white
-    //height: auto
-    height: $appheight
-    border-right: 1px solid $lightgrey
-    border-top: 1px solid $lightgrey
+    height: 100%
+    border: 1px solid $lightgrey
+    
     //push right icon
     i
-      padding: 1.6rem 2rem 1rem 1.6rem
-      color: $mediumgrey
-      cursor: pointer
-      &:hover
-        color: $mediumgrey
-    //circle items in the rail
-    ul
-      li
-        list-style: none
-        height: 3rem
-        line-height: 3rem
-        font-size: 1.2rem
-        text-align: center
-        margin: 0.4rem
-        border: 1px solid $lightgrey
-        border-radius: 2.4rem
+        padding: 1.6rem 2rem 1rem 1.6rem
         color: $mediumgrey
         cursor: pointer
-        &.active
-          color: $darkgrey
-          border: 1px solid $mediumgrey
-        
         &:hover
-          //border: 1px solid $mediumgrey
-          color: $mediumgrey
-          border: 1px solid $mediumgrey
+            color: $mediumgrey
+    //circle items in the rail
+    ul
+        li
+            list-style: none
+            height: 3rem
+            line-height: 3rem
+            font-size: 1.2rem
+            text-align: center
+            margin: 0.4rem
+            border: 1px solid $lightgrey
+            border-radius: 2.4rem
+            color: $mediumgrey
+            cursor: pointer
+            &.active
+                color: $darkgrey
+                border: 1px solid $mediumgrey
+            
+            &:hover
+              
+                color: $mediumgrey
+                border: 1px solid $mediumgrey
         
 //tooltip text from tab1-4
 #tab1
-  &:hover
-    &:before
-      content: "Pizza"
-      font-size: 12px
-      font-family: $font-family
-      padding: 0rem 1rem
-      border-radius: 0.4rem
-      width: auto
-      text-align: center
-      position: absolute
-      right: 48px
-      background: $darkgrey
-      color: white
-      z-index: 1000
+    &:hover
+        &:before
+            content: "Pizza"
+            font-size: 12px
+            font-family: $font-family
+            padding: 0rem 1rem
+            border-radius: 0.4rem
+            width: auto
+            text-align: center
+            position: absolute
+            right: 48px
+            background-color: $darkgrey
+            color: white
+            z-index: 1000
 #tab2
   &:hover
     &:before
-      content: "Recommended Deals"
-      font-size: 12px
-      line-height: 16px
-      font-family: $font-family
-      padding: 0.4rem 1rem
-      border-radius: 0.4rem
-      width: auto
-      text-align: center
-      position: absolute
-      right: 48px
-      background: $darkgrey
-      color: white
-      z-index: 1000
+        content: "Recommended Deals"
+        font-size: 12px
+        line-height: 16px
+        font-family: $font-family
+        padding: 0.4rem 1rem
+        border-radius: 0.4rem
+        width: auto
+        text-align: center
+        position: absolute
+        right: 48px
+        background: $darkgrey
+        color: white
+        z-index: 1000
 #tab3
   &:hover
     &:before
@@ -162,7 +164,7 @@ html
   background-color: $bggrey
   
 
-
+//text styles, typography
   
 h3
   font-size: 1.2rem
@@ -178,6 +180,8 @@ p
 .cta
   text-transform: Capitalize
   font-weight: 400
+.bold
+    font-weight: 600
 
 .chat
   display: inline-block
@@ -186,7 +190,7 @@ p
   border-radius: 4px
   border: 1px solid $lightgrey
   &.active
-  	border: 1px solid $green
+    border: 1px solid $green
 
 .hidewheel
   color: $blue
@@ -220,42 +224,42 @@ p
 
         &.slice1
    
-        	position: absolute
-        	top: 8rem
-        	left: 4rem
-        	z-index: 5000
+            position: absolute
+            top: 8rem
+            left: 4rem
+            z-index: 5000
         &.slice2
         
-        	position: absolute
-        	top: 3rem
-        	left: 13rem
-        	z-index: 5000
+            position: absolute
+            top: 3rem
+            left: 13rem
+            z-index: 5000
         &.slice3
-        	position: absolute
-        	top: 9rem
-        	left: 22rem
-        	z-index: 5001
+            position: absolute
+            top: 9rem
+            left: 22rem
+            z-index: 5001
         &.slice4
-        	
-        	position: absolute
-        	top: 18rem
-        	left: 3rem
-        	z-index: 5000
+            
+            position: absolute
+            top: 18rem
+            left: 3rem
+            z-index: 5000
         &.slice5
         
-        	position: absolute
-        	top: 22rem
-        	left: 13rem
-        	z-index: 5000
+            position: absolute
+            top: 22rem
+            left: 13rem
+            z-index: 5000
         &.slice6
-        	
-        	position: absolute
-        	top: 18rem
-        	left: 21rem
-        	z-index: 5000
+            
+            position: absolute
+            top: 18rem
+            left: 21rem
+            z-index: 5000
 
 
-        	
+            
       .center 
         position: absolute 
         top: 122px
@@ -312,100 +316,100 @@ p
       border-radius: 3rem
       border: 1px solid $lightgrey
       &:hover
-      	background-color: $bggrey
+        background-color: $bggrey
 //tooltip to explain each icon
 #edit1
-	&:hover
-	    &:before
-	      content: "Move"
-	      font-size: 12px
-	      font-family: $font-family
-	      padding: 0 0.4rem
-	      border-radius: 0.4rem
-	      width: auto
-	      text-align: left
-	      position: absolute
-	      left: 388px
-	      background: $darkgrey
-	      color: white
-	      z-index: 4000
+    &:hover
+        &:before
+          content: "Move"
+          font-size: 12px
+          font-family: $font-family
+          padding: 0 0.4rem
+          border-radius: 0.4rem
+          width: auto
+          text-align: left
+          position: absolute
+          left: 388px
+          background: $darkgrey
+          color: white
+          z-index: 4000
 #edit2
-	&:hover
-	    &:before
-	      content: "Add"
-	      font-size: 12px
-	      font-family: $font-family
-	      padding: 0 0.4rem
-	      border-radius: 0.4rem
-	      width: auto
-	      text-align: left
-	      position: absolute
-	      left: 388px
-	      background: $darkgrey
-	      color: white
-	      z-index: 4000
+    &:hover
+        &:before
+          content: "Add"
+          font-size: 12px
+          font-family: $font-family
+          padding: 0 0.4rem
+          border-radius: 0.4rem
+          width: auto
+          text-align: left
+          position: absolute
+          left: 388px
+          background: $darkgrey
+          color: white
+          z-index: 4000
 
 #edit3
-	&:hover
-	    &:before
-	      content: "Remove"
-	      font-size: 12px
-	      font-family: $font-family
-	      padding: 0 0.4rem
-	      border-radius: 0.4rem
-	      width: auto
-	      text-align: left
-	      position: absolute
-	      left: 388px
-	      background: $darkgrey
-	      color: white
-	      z-index: 4000
+    &:hover
+        &:before
+          content: "Remove"
+          font-size: 12px
+          font-family: $font-family
+          padding: 0 0.4rem
+          border-radius: 0.4rem
+          width: auto
+          text-align: left
+          position: absolute
+          left: 388px
+          background: $darkgrey
+          color: white
+          z-index: 4000
 #edit4
-	&:hover
-	    &:before
-	      content: "Edit"
-	      font-size: 12px
-	      font-family: $font-family
-	      padding: 0 0.4rem
-	      border-radius: 0.4rem
-	      width: auto
-	      text-align: left
-	      position: absolute
-	      left: 388px
-	      background: $darkgrey
-	      color: white
-	      z-index: 4000
+    &:hover
+        &:before
+          content: "Edit"
+          font-size: 12px
+          font-family: $font-family
+          padding: 0 0.4rem
+          border-radius: 0.4rem
+          width: auto
+          text-align: left
+          position: absolute
+          left: 388px
+          background: $darkgrey
+          color: white
+          z-index: 4000
 
 #edit5
-	&:hover
-	    &:before
-	      content: "Download"
-	      font-size: 12px
-	      font-family: $font-family
-	      padding: 0 0.4rem
-	      border-radius: 0.4rem
-	      width: auto
-	      text-align: left
-	      position: absolute
-	      left: 388px
-	      background: $darkgrey
-	      color: white
-	      z-index: 4000
+    &:hover
+        &:before
+          content: "Download"
+          font-size: 12px
+          font-family: $font-family
+          padding: 0 0.4rem
+          border-radius: 0.4rem
+          width: auto
+          text-align: left
+          position: absolute
+          left: 388px
+          background: $darkgrey
+          color: white
+          z-index: 4000
 #edit6
-	&:hover
-	    &:before
-	      content: "Home"
-	      font-size: 12px
-	      font-family: $font-family
-	      padding: 0 0.4rem
-	      border-radius: 0.4rem
-	      width: auto
-	      text-align: left
-	      position: absolute
-	      left: 388px
-	      background: $darkgrey
-	      color: white
-	      z-index: 4000
+    &:hover
+        &:before
+          content: "Home"
+          font-size: 12px
+          font-family: $font-family
+          padding: 0 0.4rem
+          border-radius: 0.4rem
+          width: auto
+          text-align: left
+          position: absolute
+          left: 388px
+          background: $darkgrey
+          color: white
+          z-index: 4000
 
 //snippet display area
 .display
@@ -478,8 +482,8 @@ p
 
 .lineitems
 
-	//background: blue
-	p
+    //background: blue
+    p
       padding-bottom: 0rem
       margin: 0
 
@@ -517,19 +521,19 @@ p
     color: $blue !important
 //color overrides
 .is-outlined-green
-	border: 1px solid $green
-	color: $green
-	&:hover
-		color: white
-		background-color: $green
-		border: 1px solid $green
+    border: 1px solid $green
+    color: $green
+    &:hover
+        color: white
+        background-color: $green
+        border: 1px solid $green
 .is-outlined-red
-	border: 1px solid $red
-	color: $red
-	&:hover
-		color: white
-		background-color: $red
-		border: 1px solid $red
+    border: 1px solid $red
+    color: $red
+    &:hover
+        color: white
+        background-color: $red
+        border: 1px solid $red
 
   
 //fill color
@@ -554,13 +558,13 @@ p
 .underline
     text-decoration: underline
 .strike
-	text-decoration: line-through
+    text-decoration: line-through
 
 //visibility
 .is-visible
-	display: block
+    display: block
 .is-invisible
-	display: none 
+    display: none 
   
   
 //dropdown  
@@ -636,39 +640,39 @@ p
 
 //deals
 .deal
-	padding: 1.6rem 0 1.6rem 0
-	font-family: $font-family !important
+    padding: 1.6rem 0 1.6rem 0
+    font-family: $font-family !important
 
-	.button
-		margin-right: 0.4rem !important
-	p
-	 	font-size: 12px
-	 	&:nth-of-type(1)
-	 		color: $darkgrey
-	 		line-height: 16px
-	 		margin-bottom: 0.4rem
-	 	&:nth-of-type(2)
-	 		color: $mediumgrey
+    .button
+        margin-right: 0.4rem !important
+    p
+        font-size: 12px
+        &:nth-of-type(1)
+            color: $darkgrey
+            line-height: 16px
+            margin-bottom: 0.4rem
+        &:nth-of-type(2)
+            color: $mediumgrey
 //promo
 .legend
-	span
-		color: $darkgrey
-		padding-right: 0.8rem
-		display: block
-		span
-			display: inline
-			color: transparent
-			font-size: 8px
-			line-height: 0.2rem
-			width: 1rem
-			height: 1rem
-			border-radius: 0.4rem
-			margin-right: 0.4rem
+    span
+        color: $darkgrey
+        padding-right: 0.8rem
+        display: block
+        span
+            display: inline
+            color: transparent
+            font-size: 8px
+            line-height: 0.2rem
+            width: 1rem
+            height: 1rem
+            border-radius: 0.4rem
+            margin-right: 0.4rem
 //orders pic
 .orders
-	position: absolute
-	z-index: 4000
-	top: 14rem
-	left: 6rem
+    position: absolute
+    z-index: 4000
+    top: 14rem
+    left: 6rem
 
-	 
+     
