@@ -14,7 +14,7 @@ html {
   overflow: scroll; }
   .background #chat {
     position: absolute;
-    top: 630px;
+    top: 540px;
     left: 360px;
     max-width: 440px;
     font-size: 12px; }
@@ -169,7 +169,7 @@ p {
       .pizzasection .pizza .text.slice1 {
         position: absolute;
         top: 8rem;
-        left: 4rem;
+        left: 2rem;
         z-index: 5000; }
       .pizzasection .pizza .text.slice2 {
         position: absolute;
@@ -188,13 +188,13 @@ p {
         z-index: 5000; }
       .pizzasection .pizza .text.slice5 {
         position: absolute;
-        top: 22rem;
-        left: 13rem;
+        top: 23rem;
+        left: 11rem;
         z-index: 5000; }
       .pizzasection .pizza .text.slice6 {
         position: absolute;
-        top: 18rem;
-        left: 21rem;
+        top: 17rem;
+        left: 20.5rem;
         z-index: 5000; }
     .pizzasection .pizza .center {
       position: absolute;
@@ -253,12 +253,13 @@ p {
   padding: 0 0.4rem;
   border-radius: 0.4rem;
   width: auto;
-  text-align: left;
+  text-align: right;
   position: absolute;
-  left: 388px;
+  right: 88px;
   background: #333333;
   color: white;
-  z-index: 4000; }
+  cursor: pointer;
+  z-index: 6000; }
 
 #edit2:hover:before {
   content: "Add";
@@ -267,12 +268,13 @@ p {
   padding: 0 0.4rem;
   border-radius: 0.4rem;
   width: auto;
-  text-align: left;
+  text-align: right;
   position: absolute;
-  left: 388px;
+  right: 88px;
   background: #333333;
   color: white;
-  z-index: 4000; }
+  cursor: pointer;
+  z-index: 6000; }
 
 #edit3:hover:before {
   content: "Remove";
@@ -281,12 +283,13 @@ p {
   padding: 0 0.4rem;
   border-radius: 0.4rem;
   width: auto;
-  text-align: left;
+  text-align: right;
   position: absolute;
-  left: 388px;
+  right: 88px;
   background: #333333;
   color: white;
-  z-index: 4000; }
+  cursor: pointer;
+  z-index: 6000; }
 
 #edit4:hover:before {
   content: "Edit";
@@ -295,12 +298,13 @@ p {
   padding: 0 0.4rem;
   border-radius: 0.4rem;
   width: auto;
-  text-align: left;
+  text-align: right;
   position: absolute;
-  left: 388px;
+  right: 88px;
   background: #333333;
   color: white;
-  z-index: 4000; }
+  cursor: pointer;
+  z-index: 6000; }
 
 #edit5:hover:before {
   content: "Download";
@@ -309,12 +313,13 @@ p {
   padding: 0 0.4rem;
   border-radius: 0.4rem;
   width: auto;
-  text-align: left;
+  text-align: right;
   position: absolute;
-  left: 388px;
+  right: 88px;
   background: #333333;
   color: white;
-  z-index: 4000; }
+  cursor: pointer;
+  z-index: 6000; }
 
 #edit6:hover:before {
   content: "Home";
@@ -323,12 +328,13 @@ p {
   padding: 0 0.4rem;
   border-radius: 0.4rem;
   width: auto;
-  text-align: left;
+  text-align: right;
   position: absolute;
-  left: 388px;
+  right: 88px;
   background: #333333;
   color: white;
-  z-index: 4000; }
+  cursor: pointer;
+  z-index: 6000; }
 
 .display {
   padding: 8px 0 0 0; }
@@ -509,8 +515,8 @@ p {
   font-size: 1.2rem;
   font-family: "Open Sans", sans-serif;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 0px;
   width: 440px;
   background-color: #fff; }
 
@@ -545,5 +551,5 @@ p {
 .orders {
   position: absolute;
   z-index: 4000;
-  top: 14rem;
+  top: 16rem;
   left: 6rem; }

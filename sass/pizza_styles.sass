@@ -35,7 +35,7 @@ html
     overflow: scroll
     #chat
         position: absolute
-        top: 630px
+        top: 540px
         left: 360px
         max-width: 440px
         font-size: 12px
@@ -53,7 +53,7 @@ html
     background-color: white
     height: 100%
     border: 1px solid $lightgrey
-    
+    //transition: 0.2s
     //push right icon
     i
         padding: 1.6rem 2rem 1rem 1.6rem
@@ -226,7 +226,7 @@ p
    
             position: absolute
             top: 8rem
-            left: 4rem
+            left: 2rem
             z-index: 5000
         &.slice2
         
@@ -248,14 +248,14 @@ p
         &.slice5
         
             position: absolute
-            top: 22rem
-            left: 13rem
+            top: 23rem
+            left: 11rem
             z-index: 5000
         &.slice6
             
             position: absolute
-            top: 18rem
-            left: 21rem
+            top: 17rem
+            left: 20.5rem
             z-index: 5000
 
 
@@ -318,98 +318,54 @@ p
       &:hover
         background-color: $bggrey
 //tooltip to explain each icon
+//tooltip style
+@mixin tooltip
+    font-size: 12px
+    font-family: $font-family
+    padding: 0 0.4rem
+    border-radius: 0.4rem
+    width: auto
+    text-align: right
+    position: absolute
+    right: 88px
+    background: $darkgrey
+    color: white
+    cursor: pointer
+    z-index: 6000
+
 #edit1
     &:hover
         &:before
-          content: "Move"
-          font-size: 12px
-          font-family: $font-family
-          padding: 0 0.4rem
-          border-radius: 0.4rem
-          width: auto
-          text-align: left
-          position: absolute
-          left: 388px
-          background: $darkgrey
-          color: white
-          z-index: 4000
+            content: "Move"
+            @include tooltip
+          
 #edit2
     &:hover
         &:before
-          content: "Add"
-          font-size: 12px
-          font-family: $font-family
-          padding: 0 0.4rem
-          border-radius: 0.4rem
-          width: auto
-          text-align: left
-          position: absolute
-          left: 388px
-          background: $darkgrey
-          color: white
-          z-index: 4000
+            content: "Add"
+            @include tooltip
 
 #edit3
     &:hover
         &:before
-          content: "Remove"
-          font-size: 12px
-          font-family: $font-family
-          padding: 0 0.4rem
-          border-radius: 0.4rem
-          width: auto
-          text-align: left
-          position: absolute
-          left: 388px
-          background: $darkgrey
-          color: white
-          z-index: 4000
+            content: "Remove"
+            @include tooltip
 #edit4
     &:hover
         &:before
           content: "Edit"
-          font-size: 12px
-          font-family: $font-family
-          padding: 0 0.4rem
-          border-radius: 0.4rem
-          width: auto
-          text-align: left
-          position: absolute
-          left: 388px
-          background: $darkgrey
-          color: white
-          z-index: 4000
+          @include tooltip
 
 #edit5
     &:hover
         &:before
           content: "Download"
-          font-size: 12px
-          font-family: $font-family
-          padding: 0 0.4rem
-          border-radius: 0.4rem
-          width: auto
-          text-align: left
-          position: absolute
-          left: 388px
-          background: $darkgrey
-          color: white
-          z-index: 4000
+          @include tooltip
 #edit6
     &:hover
         &:before
           content: "Home"
-          font-size: 12px
-          font-family: $font-family
-          padding: 0 0.4rem
-          border-radius: 0.4rem
-          width: auto
-          text-align: left
-          position: absolute
-          left: 388px
-          background: $darkgrey
-          color: white
-          z-index: 4000
+          @include tooltip
 
 //snippet display area
 .display
@@ -632,8 +588,8 @@ p
   font-size: 1.2rem
   font-family: $font-family
   position: absolute
-  top: 0
-  right: 0
+  top: 0px
+  right: 0px
   width: 440px
   background-color: #fff
   //height: auto
@@ -672,7 +628,7 @@ p
 .orders
     position: absolute
     z-index: 4000
-    top: 14rem
+    top: 16rem
     left: 6rem
 
      

@@ -108,7 +108,7 @@ code[0].addEventListener("click", function(){
     
 code[1].addEventListener("click", function(){
   switchText(1);                       
-  textarea.innerHTML="Good news, this deal is still available. You can purchase it here: www.groupon.com/deals/xxx";
+  textarea.innerHTML="I apologize for the trouble here and appreciate you reaching out so that we can make it right. Given the circumstances, I'd be happy to issue a refund for this purchase to your original form of payment, as requested. We'll process your refund right away and send you a confirmation email as soon as we do. Please note that if you paid by credit or debit card it may take your financial institution several days to post this refund to your account.";
 });
 
 code[2].addEventListener("click", function(){
@@ -141,11 +141,39 @@ code[7].addEventListener("click", function(){
   textarea.innerHTML="It looks like the address you're attempting includes the word Box, which may be confusing our system since we are currently not able to ship to P.O boxes. I recommend modifying Box to Bx then try again.";
 });
 
-//clicking on pizza slice 6 to enter text
-var slice6= document.querySelector(".slice6")
-slice6.addEventListener("click", function(){
+
+
+//click slide 5 to update the text to the second level
+var slice5= document.querySelector(".slice5")
+function updateText(x, y){
+  //updating the selected slice(x)'s text into y
+  document.querySelector(x).innerHTML=y;
+}
+slice5.addEventListener("click", function(){
+  updateText(".slice1", "Thanks&nbsp;for your&nbsp;patience (/thanks)");
+  updateText(".slice2", "Call&nbsp;Back Request (/call)");
+  updateText(".slice3", "Please Wait&nbsp;1 (/wait1)");
+  updateText(".slice4", "Please Wait&nbsp;2 (/wait2)");
+  updateText(".slice5", "Still Looking&nbsp;1 (/look1)");
+  updateText(".slice6", "Still Looking&nbsp;2 (/look2)");
+  
+});
+// then click slide 1 to fill out text area
+var slice1= document.querySelector(".slice1")
+slice1.addEventListener("click", function(){
   switchText(1);        
-  textarea.innerHTML="Please allow me a moment to look into this for you.";
+  textarea.innerHTML="Thanks for your patience.";
+});
+//if click back button, update text back to what they used to be
+var back= document.querySelector(".center")
+back.addEventListener("click", function(){
+  updateText(".slice1", "Greeting /Idle /Closing");
+  updateText(".slice2", "Refund /Trade&nbsp;In /Deny");
+  updateText(".slice3", "LAER");
+  updateText(".slice4", "Order Creation");
+  updateText(".slice5", "Please&nbsp;Wait /Call&nbsp;Back");
+  updateText(".slice6", "Gamification");
+  
 });
 
 
