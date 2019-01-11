@@ -1,13 +1,23 @@
+//****************************//
+//******** Notes *************//
+//****************************//
+// imported bulma css for layout, input, dropdown styles etc
+// imported font-awesome for icons
+
+
+
+
 $darkgrey: #333333
 $mediumgrey: #75787B
 $lightgrey: #E6E7E8
 $bggrey: #F6F7F8
 $red: #CC0831
-$green: #367806
-$blue: #317efc
+$green: #367806 
+$blue: #0081e3
 $yellow: #E08300
 $font-family: 'Open Sans', sans-serif
 $appheight: 1506px
+
 html
     font-family: $font-family !important
     font-size: 10px
@@ -23,8 +33,50 @@ html
 @mixin font
     font-family: $font-family
 
+//****************************//
+//******** Typography ********//
+//****************************//
 
+//section labels  
+h3
+  font-size: 1.2rem
+  color: $mediumgrey
+  line-height: 1.6rem
+  text-transform: uppercase
+  font-weight: 600
+  letter-spacing: 0.02px
+  padding-bottom: 0.8rem
+//body
+p
+  font-size: 1.2rem
+  line-height: 1.6rem
+.cta
+  text-transform: Capitalize
+  font-weight: 400
+.bold
+    font-weight: 600
+.chat
+  display: inline-block
+  padding: 4px
+  margin: 8px 0 0 0 
+  border-radius: 4px
+  border: 1px solid $lightgrey
+  &.active
+    border: 1px solid $green
 
+//link styles
+a
+    font-size: 1.2rem
+    &:hover
+        color: $blue
+        text-decoration: underline
+//icons
+i
+    padding: 1rem 1rem 1rem 1rem
+    color: $mediumgrey
+    cursor: pointer
+    &:hover
+        color: $mediumgrey
 
 
 .background
@@ -39,9 +91,7 @@ html
         left: 360px
         max-width: 440px
         font-size: 12px
-        //@extend %font
-        //background: red
-        //color: white
+       
 
 
 .rail
@@ -55,12 +105,7 @@ html
     border: 1px solid $lightgrey
     //transition: 0.2s
     //push right icon
-    i
-        padding: 1.6rem 2rem 1rem 1.6rem
-        color: $mediumgrey
-        cursor: pointer
-        &:hover
-            color: $mediumgrey
+   
     //circle items in the rail
     ul
         li
@@ -83,76 +128,43 @@ html
                 color: $mediumgrey
                 border: 1px solid $mediumgrey
         
-//tooltip text from tab1-4
+//tooltip for tab 1-4
+@mixin tooltip_tab
+    font-size: 12px
+    font-family: $font-family
+    padding: 0rem 1rem
+    border-radius: 0.4rem
+    width: auto
+    text-align: center
+    position: absolute
+    right: 48px
+    background-color: $darkgrey
+    color: white
+    z-index: 1000
+
 #tab1
     &:hover
         &:before
             content: "Pizza"
-            font-size: 12px
-            font-family: $font-family
-            padding: 0rem 1rem
-            border-radius: 0.4rem
-            width: auto
-            text-align: center
-            position: absolute
-            right: 48px
-            background-color: $darkgrey
-            color: white
-            z-index: 1000
+            @include tooltip_tab           
 #tab2
   &:hover
     &:before
         content: "Recommended Deals"
-        font-size: 12px
-        line-height: 16px
-        font-family: $font-family
-        padding: 0.4rem 1rem
-        border-radius: 0.4rem
-        width: auto
-        text-align: center
-        position: absolute
-        right: 48px
-        background: $darkgrey
-        color: white
-        z-index: 1000
+        @include tooltip_tab
 #tab3
   &:hover
     &:before
       content: "Promo Codes"
-      font-size: 12px
-      line-height: 16px
-      font-family: $font-family
-      padding: 0.4rem 1rem
-      border-radius: 0.4rem
-      max-width: 120px
-      text-align: center
-      position: absolute
-      right: 48px
-      background: $darkgrey
-      color: white
-      z-index: 1000     
-// #tab4
-//   &:hover
-//     &:before
-//       content: "Other Apps"
-//       font-size: 12px
-//       line-height: 16px
-//       font-family: $font-family
-//       padding: 0.4rem 1rem
-//       border-radius: 0.4rem
-//       max-width: 120px
-//       text-align: center
-//       position: absolute
-//       right: 48px
-//       background: $darkgrey
-//       color: white
-//       z-index: 1000
+      @include tooltip_tab     
+
 
 .container
   border-top: 1px solid #ededed
   max-width: 440px
   padding: 1.2rem
-  //footer has grey background
+
+
 .footer
   width: 440px
   height: 32px
@@ -164,33 +176,7 @@ html
   background-color: $bggrey
   
 
-//text styles, typography
-  
-h3
-  font-size: 1.2rem
-  color: $mediumgrey
-  line-height: 1.6rem
-  text-transform: uppercase
-  font-weight: 600
-  letter-spacing: 0.02px
 
-p
-  font-size: 1.2rem
-  line-height: 1.6rem
-.cta
-  text-transform: Capitalize
-  font-weight: 400
-.bold
-    font-weight: 600
-
-.chat
-  display: inline-block
-  padding: 4px
-  margin: 8px 0 0 0 
-  border-radius: 4px
-  border: 1px solid $lightgrey
-  &.active
-    border: 1px solid $green
 
 .hidewheel
   color: $blue
@@ -217,49 +203,31 @@ p
         border-radius: 50% 
         overflow: hidden
       .text
-
+        position: absolute
+        z-index: 5000
         width: 1rem
         color: $darkgrey
         font-weight: bold
 
-        &.slice1
-   
-            position: absolute
+        &.slice1           
             top: 8rem
-            left: 2rem
-            z-index: 5000
-        &.slice2
-        
-            position: absolute
+            left: 2rem  
+        &.slice2         
             top: 3rem
             left: 13rem
-            z-index: 5000
-        &.slice3
-            position: absolute
+        &.slice3          
             top: 9rem
             left: 22rem
-            z-index: 5001
         &.slice4
-            
-            position: absolute
             top: 18rem
             left: 3rem
-            z-index: 5000
-        &.slice5
-        
-            position: absolute
+        &.slice5        
             top: 23rem
-            left: 11rem
-            z-index: 5000
+            left: 11rem         
         &.slice6
-            
-            position: absolute
             top: 17rem
             left: 20.5rem
-            z-index: 5000
-
-
-            
+           
       .center 
         position: absolute 
         top: 122px
@@ -304,7 +272,8 @@ p
           background-color: $lightgrey
         
   
-    
+  //tool icons
+
   .icons
     padding-left: 1.2rem
     cursor: pointer
@@ -575,11 +544,11 @@ p
   border: 1px solid blue
 //text area
 .textarea
-  margin: 8px 0
   font-size: 1.2rem
   color: $mediumgrey
   padding: 8px 0 0 4px 
-  overflow: scroll !important
+  margin-bottom: 1.2rem
+  //overflow: scroll !important
   height: 100px
   
 .slide
