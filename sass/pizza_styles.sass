@@ -13,10 +13,12 @@ $lightgrey: #E6E7E8
 $bggrey: #F6F7F8
 $red: #CC0831
 $green: #367806 
+$lightgreen: #EDF5E7
+$darkgreen: #367806
 $blue: #0081e3
 $yellow: #E08300
 $font-family: 'Open Sans', sans-serif
-$appheight: 1506px
+$appheight: 1206px
 
 html
     font-family: $font-family !important
@@ -25,6 +27,9 @@ html
     background: #F9F7F9 
 ::-webkit-scrollbar
     display: none
+
+body
+    color: $darkgrey
 
 // ::-webkit-scrollbar 
 //     width: 0px
@@ -41,11 +46,11 @@ html
 h3
   font-size: 1.2rem
   color: $mediumgrey
-  line-height: 1.6rem
+  line-height: 1.4rem
   text-transform: uppercase
   font-weight: 600
   letter-spacing: 0.02px
-  padding-bottom: 0.8rem
+  //padding-bottom: 0.8rem
 //body
 p
   font-size: 1.2rem
@@ -60,9 +65,10 @@ p
   padding: 4px
   margin: 8px 0 0 0 
   border-radius: 4px
-  border: 1px solid $lightgrey
+  border: 1px solid $mediumgrey
   &.active
     border: 1px solid $green
+    background-color: $lightgreen
 
 //link styles
 a
@@ -169,7 +175,7 @@ i
 .footer
   width: 440px
   height: 32px
-  position: fixed
+  position: absolute
   bottom: 0
   right: 0
   margin: 0
@@ -184,7 +190,7 @@ i
   cursor: pointer
 .pizzasection
   //background-color: blue
-  padding: 0 0 16px 32px
+  padding: 0 0 4px 32px
   display: flex
   flex-flow: row nowrap
   vertical-align: center
@@ -358,8 +364,13 @@ i
     span
       padding: 0 0.8rem 0 0 
       font-weight: 600
-    
-    
+//override for copy to chat button
+#copytochat    
+  font-weight: 600 !important
+  border: 1px solid $green !important
+  &:hover
+    color: white
+    //background-color: $darkgreen
     
 //info overrides
 .info
@@ -466,6 +477,8 @@ i
 .is-green
   background: $green
   color: white
+.is-green-light
+  background-color: $lightgreen
 .is-red
   background: $red
   color: white
@@ -495,7 +508,7 @@ i
   
 //dropdown  
 .dropdown-trigger
-  width: 320px
+  width: 328px
   padding-left: 6px
   .icon
     border: 0
@@ -550,7 +563,7 @@ i
   padding: 8px 0 0 4px 
   margin-bottom: 1.2rem
   //overflow: scroll !important
-  height: 100px
+  min-height: 80px !important
   
 .slide
   width: 440px

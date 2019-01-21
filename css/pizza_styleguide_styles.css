@@ -6,14 +6,16 @@ html {
 ::-webkit-scrollbar {
   display: none; }
 
+body {
+  color: #333333; }
+
 h3 {
   font-size: 1.2rem;
   color: #75787B;
-  line-height: 1.6rem;
+  line-height: 1.4rem;
   text-transform: uppercase;
   font-weight: 600;
-  letter-spacing: 0.02px;
-  padding-bottom: 0.8rem; }
+  letter-spacing: 0.02px; }
 
 p {
   font-size: 1.2rem;
@@ -31,9 +33,10 @@ p {
   padding: 4px;
   margin: 8px 0 0 0;
   border-radius: 4px;
-  border: 1px solid #E6E7E8; }
+  border: 1px solid #75787B; }
   .chat.active {
-    border: 1px solid #367806; }
+    border: 1px solid #367806;
+    background-color: #EDF5E7; }
 
 a {
   font-size: 1.2rem; }
@@ -141,7 +144,7 @@ i {
 .footer {
   width: 440px;
   height: 32px;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
   margin: 0;
@@ -153,7 +156,7 @@ i {
   cursor: pointer; }
 
 .pizzasection {
-  padding: 0 0 16px 32px;
+  padding: 0 0 4px 32px;
   display: flex;
   flex-flow: row nowrap;
   vertical-align: center; }
@@ -356,6 +359,12 @@ i {
       padding: 0 0.8rem 0 0;
       font-weight: 600; }
 
+#copytochat {
+  font-weight: 600 !important;
+  border: 1px solid #367806 !important; }
+  #copytochat:hover {
+    color: white; }
+
 .info {
   margin: 8px 0 0 0;
   font-size: 1.2rem;
@@ -438,6 +447,9 @@ i {
   background: #367806;
   color: white; }
 
+.is-green-light {
+  background-color: #EDF5E7; }
+
 .is-red {
   background: #CC0831;
   color: white; }
@@ -466,7 +478,7 @@ i {
   display: none; }
 
 .dropdown-trigger {
-  width: 320px;
+  width: 328px;
   padding-left: 6px; }
   .dropdown-trigger .icon {
     border: 0; }
@@ -505,11 +517,11 @@ i {
   color: #75787B;
   padding: 8px 0 0 4px;
   margin-bottom: 1.2rem;
-  height: 100px; }
+  min-height: 80px !important; }
 
 .slide {
   width: 440px;
-  height: 1506px;
+  height: 1206px;
   font-size: 1.2rem;
   font-family: "Open Sans", sans-serif;
   position: absolute;
