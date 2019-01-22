@@ -2,8 +2,12 @@
 //shut off all tab and only show slide1 at first 
 function show(slideNum){
   $(".slide").hide();
-  var num =`#slide${slideNum}` 
+  $(".tab").removeClass("rail_active");
+  var num =`#slide${slideNum}`
+  var tabnum= `#tab${slideNum}` 
   $(num).show();
+  $(tabnum).addClass("rail_active");
+
   
 }
 

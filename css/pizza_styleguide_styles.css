@@ -73,6 +73,8 @@ i {
   background-color: white;
   height: 100%;
   border: 1px solid #E6E7E8; }
+  .rail i {
+    padding: 1.2rem 0 1.2rem 1.6rem; }
   .rail ul li {
     list-style: none;
     height: 3rem;
@@ -90,6 +92,10 @@ i {
     .rail ul li:hover {
       color: #75787B;
       border: 1px solid #75787B; }
+
+.rail_active {
+  background-color: #333333;
+  color: white !important; }
 
 #tab1:hover:before {
   content: "Pizza";
