@@ -9,8 +9,9 @@
 
 $darkgrey: #333333
 $mediumgrey: #75787B
-$lightgrey: #E6E7E8
-$bggrey: #F6F7F8
+$lightgrey: #ccc
+//$bggrey: #F6F7F8
+$bggrey: #f3f3f3
 $red: #CC0831
 $green: #367806 
 $lightgreen: #EDF5E7
@@ -69,6 +70,22 @@ p
   &.active
     border: 1px solid $green
     background-color: $lightgreen
+  &.alert
+    border: 1px solid $red
+    background-color: white
+    animation: chatalert 0.6s ease infinite alternate
+//chat alert    
+@keyframes chatalert 
+  0%   
+    background-color: white
+    color: $red
+  100% 
+    background-color: $red
+    color: white
+
+
+
+
 
 //link styles
 a
@@ -83,6 +100,19 @@ i
     cursor: pointer
     &:hover
         color: $mediumgrey
+
+//form label
+label
+    font-size: 1.2rem
+    line-height: 2.4rem
+//input style
+input, textarea, .dropdown
+    border-color: $lightgrey !important
+    
+::placeholder
+  color: $mediumgrey !important
+
+
 
 
 .background
@@ -116,28 +146,53 @@ i
 
     //circle items in the rail
     ul
-        li
-            list-style: none
+      li
+          
+          list-style: none
+          line-height: 1.2rem
+          font-size: 1.2rem
+          text-align: center
+          margin: 0.4rem
+          
+          &.tab 
             height: 3rem
             line-height: 3rem
-            font-size: 1.2rem
-            text-align: center
-            margin: 0.4rem
             border: 1px solid $lightgrey
             border-radius: 2.4rem
             color: $mediumgrey
             cursor: pointer
-            &.active
-                color: $darkgrey
-                border: 1px solid $mediumgrey
+
+          
+          &.active
+              color: $darkgrey
+              border: 1px solid $mediumgrey
+          
+          &:hover
             
-            &:hover
-              
-                color: $mediumgrey
-                border: 1px solid $mediumgrey
+              //color: $mediumgrey
+              border: 1px solid $mediumgrey
+      &.rail_bottom
+        position: absolute
+        bottom: 0
+
+        li
+          //background-color: $lightgrey
+          border: 1px solid $lightgrey
+          border-radius: 0.4rem
+          height: 4rem
+          line-height: 1.6rem
+          padding-top: 0.4rem
+          &:hover
+            border-color: $darkgrey 
+            cursor: pointer
+    
+
+
+//when tab or switch is selected
 .rail_active
   background-color: $darkgrey
-  color: white !important     
+  color: white !important  
+  
 //tooltip for tab 1-4
 @mixin tooltip_tab
     font-size: 12px
@@ -167,11 +222,16 @@ i
   &:hover
     &:before
       content: "Promo Codes"
+      @include tooltip_tab   
+#tab4
+  &:hover
+    &:before
+      content: "Microwave"
       @include tooltip_tab     
 
 
 .container
-  border-top: 1px solid #ededed
+  border-top: 1px solid $lightgrey
   max-width: 440px
   padding: 1.2rem
 
@@ -303,7 +363,7 @@ i
 @mixin tooltip
     font-size: 12px
     font-family: $font-family
-    padding: 0 0.4rem
+    padding: 0.4rem 0.8rem
     border-radius: 0.4rem
     width: auto
     text-align: right
@@ -340,12 +400,12 @@ i
 #edit5
     &:hover
         &:before
-          content: "Download"
+          content: "Download Snippets"
           @include tooltip
 #edit6
     &:hover
         &:before
-          content: "Home"
+          content: "Reset Wheel"
           @include tooltip
 
 //snippet display area
@@ -375,7 +435,10 @@ i
   border: 1px solid $green !important
   &:hover
     color: white
+    text-decoration: none
     //background-color: $darkgreen
+#secondary 
+  border: 1px solid $darkgrey !important
     
 //info overrides
 .info
@@ -431,7 +494,7 @@ i
 
       span
         font-size: 1.2rem
-        line-height: 1.2rem
+        line-height: 1.1rem
         font-weight: 400
 
         display: inline-block
@@ -536,7 +599,7 @@ i
       &>*
         //padding: 8px
         &:hover
-          background-color: #ededed
+          background-color: $bggrey
       span
         line-height: 32px
         //vertical-align: top
@@ -565,7 +628,7 @@ i
 .textarea
   font-size: 1.2rem
   color: $mediumgrey
-  padding: 8px 0 0 4px 
+  padding: 4px 0 0 4px 
   margin-bottom: 1.2rem
   //overflow: scroll !important
   min-height: 80px !important

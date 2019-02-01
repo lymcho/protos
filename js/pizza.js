@@ -219,7 +219,18 @@ showOrder.addEventListener("click", function(){
 
 
 
-
+//clicking on the switch will change text
+var switchbutton= document.querySelector("#tab4")
+switchbutton.addEventListener("click", function(){
+  this.classList.toggle("rail_active");
+  if (this.innerHTML==="MV OFF"){
+    this.innerHTML="MV ON";
+  }
+  else{
+    this.innerHTML="MV OFF";
+  }
+  
+});
 
 
 
