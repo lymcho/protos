@@ -126,6 +126,8 @@ input, textarea, .dropdown {
     position: absolute;
     bottom: 0;
     text-align: center; }
+    .rail ul.rail_bottom img {
+      padding-left: 0.5rem; }
     .rail ul.rail_bottom li {
       border: 1px solid #ccc;
       border-radius: 0.4rem;
