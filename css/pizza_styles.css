@@ -63,6 +63,9 @@ i {
   i:hover {
     color: #75787B; }
 
+.fa-external-link-alt {
+  margin-top: 1rem; }
+
 label {
   font-size: 1.2rem;
   line-height: 2.4rem; }
