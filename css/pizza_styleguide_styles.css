@@ -264,7 +264,7 @@ input, textarea, .dropdown {
       .pizzasection .pizza .text.slice6 {
         top: 17rem;
         left: 20.5rem; }
-    .pizzasection .pizza .center {
+    .pizzasection .pizza .pizzacenter {
       position: absolute;
       top: 122px;
       left: 122px;
@@ -274,7 +274,7 @@ input, textarea, .dropdown {
       background: black;
       border-radius: 50%;
       box-shadow: 0 0 3px #ccc; }
-      .pizzasection .pizza .center p {
+      .pizzasection .pizza .pizzacenter p {
         color: white;
         font-weight: 600;
         padding: 2.0rem 0 0 1.3rem; }
