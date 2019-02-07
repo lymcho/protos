@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <title>pizza prototype new</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+		
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/pizza_styles.css">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+</head>
+<body>
+<!--   chat screens -->
+<div class="background">
+	<img src="images/pizza/chatscreens.png" alt="">
+	<!--   chat text area change after ciicking "copy to chat" button -->
+	<p id="chat">Your answer here...</p>
+</div>
+<div class="rail" >
+
+	<i class="fas fa-lg fa-chevron-right pushright "></i>
+
+	<ul class="rail_top">
+
+		<li class="tab" id="tab1">PZ</li>
+		<li class="tab" id="tab2">RD</li>
+		<li class="tab" id="tab3">PR</li>
+
+		
+		<!-- <li class="tab" id="tab4">...</li> -->
+	</ul>
+	<ul class="rail_bottom">
+		<p class="center">&nbsp;MW</p>
+		<img src="images/pizza/toggle.png" alt="">
+		<!-- <li class="switch" id="tab4">MV OFF</li> -->
+	</ul>
+	
+
+</div>
+<div class="slide" id="slide1">
+	<!-- current chats -->
+	<div class="container">
+		<h3>current chats</h3>
+		<div class="chat active">
+			<p><span class="bold">Chris&nbsp;&nbsp;&nbsp;</span><span>2:45&nbsp;&nbsp;</span><span>00:45&nbsp;</span></p>
+		</div>
+		<div class="chat">
+			<p ><span class="bold">Thanh&nbsp;&nbsp;&nbsp;</span><span>01:12&nbsp;&nbsp;</span><span>03:00&nbsp;</span></p>
+		</div>
+	</div>
+	<!-- pizza wheel -->
+	<div class="container">
+		<h3>Snippets<span class="cta is-pulled-right "><a class="hidewheel" >Hide Wheel</a></span></h3>
+		<div class="pizzasection">
+			<!-- pizza wheel  -->
+			<div class="pizza">
+				<span class="text slice1">Greeting /Idle /Closing</span>
+				<span class="text slice2">Refund /Trade&nbsp;In /Deny</span>
+				<span class="text slice3">LAER</span>
+				<span class="text slice4">Order Creation</span>
+				<span class="text slice5">Please&nbsp;Wait /Call&nbsp;Back</span>
+				<span class="text slice6">Gamification</span>
+				<div class="pizzacenter">
+					<p>Back</p>
+				</div>
+				<ul>
+				<!--   pizza slices -->
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+
+			</div>
+
+			<!-- row of icons -->
+			<div class="icons">
+				<br><br>
+				<span class="icon is-large" id="edit1">
+				<i class="fas fa-lg fa-arrows-alt"></i>
+			</span><br>
+				<span class="icon is-large" id="edit2">
+				<i class="fas fa-lg fa-plus"></i>
+			</span><br>
+				<span class="icon is-large" id="edit3">
+				<i class="fas fa-lg fa-minus"></i>
+			</span><br>
+				<span class="icon is-large"id="edit4">
+				<i class="fas fa-lg fa-edit"></i>
+			</span><br>
+				<span class="icon is-large" id="edit5">
+				<i class="fas fa-lg fa-file-download"></i>
+			</span><br>
+				<span class="icon is-large" id="edit6">
+				<i class="fas fa-lg fa-home"></i>
+			</span><br>
+			</div>
+		</div>
+
+		<!--   snippet display area -->
+
+		<div class="display">
+			<!--   text area -->
+			<div class="control">
+				<textarea class="textarea" readonly>Find a Snippet Using Wheel or Macro...</textarea>
+			</div>
+			<!--   search macro -->
+			<div class="dropdown is-down">
+				<!--   button -->
+				<div href="" id="copytochat" class="button is-medium is-green"">Copy to Chat</div>
+				<div class="dropdown-trigger">
+					<div class="control has-icons-right">
+						<input id="searchmacro" class="input is-medium" type="text" placeholder="Search Macro" value="">
+						<span class="icon is-small is-right">
+				<i class="fas fa-search"></i>
+			</span>
+					</div>
+				</div>
+				<div class="dropdown-menu" role="menu">
+					<div class="dropdown-content">
+						<div class="dropdown-item">
+							<p><span>D.T2b</span><span class="code">Deny Refund, Trade In or Contact Merchant</span></p>
+							<p><span>A.R24c.1</span><span class="code">Approve Refund Request(Customer Reply)</span></p>
+							<p><span>D.H12</span><span class="code">Final Sale</span></p>
+							<p><span>D.T6a</span><span class="code">Deny Refund, Trade In Started</span></p>
+							<p><span>D.T2a</span><span class="code">Deny Refund, Trade In Already Enabled</span></p>
+							<p><span>Ga.I2d</span><span class="code">Cancel Booking, Issue Refund</span></p>
+							<p><span>Ga.I2</span><span class="code">Cancel Booking, Issue Refund(Cash)</span></p>
+							<p><span>Ga.I4c</span><span class="code">Bounceback, Can't refund until Reservation</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- reason code-->
+	<div class="container">
+		<div class="columns is-mobile">
+			<div class="column is-6">
+				<!--       panel top -->
+				<h3>reason code<span class="cta is-pulled-right"><a>reset</a></span><span class="cta is-pulled-right"></span></h3>
+
+				<div class="control has-icons-right reasoncode">
+					<input class="input is-medium" type="text" placeholder="Search Reason Code">
+					<span class="icon is-small is-right">
+				<i class="fas fa-search"></i>
+			</span>
+					<p><span>1</span>Groupon Not Yet Purchased</p>
+					<p><span>2</span>Groupon Purchased and NOT USED</p>
+					<p><span>3</span>Groupon Account / Subscription</p>
+					<p><span>4</span>Non-Customer Related</p>
+				</div>
+
+			</div>
+			<!--    info -->
+			<div class="column is-6">
+				<h3>INfo<span class="cta is-pulled-right"><a href="">wrap Up&nbsp;&nbsp;</a><a>Cyclops&nbsp;&nbsp;</a><a>reset</a></span></h3>
+				<div class="field is-horizontal info">
+					<!--           name -->
+					<p>Name</p>
+					<!--           form field-->
+					<div class="field-body">
+						<div class="field">
+							<p class="control">
+								<input class="input is-medium" value="Chris" readonly>
+							</p>
+						</div>
+					</div>
+				</div>
+
+			 <!--  email -->
+				<div class="field is-horizontal info">
+					<p>Email</p>
+					<div class="field-body">
+						<div class="field">
+							<input class="input is-medium" value="chris@yahoo.com" readonly>
+
+						</div>
+					</div>
+				</div>
+<!--         inserting the segment info -->
+				<!--  version ` -->
+			  <p><span>Segment</span><span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;white glove</span></p>
+			 <!--  version 2 -->
+				<!-- <div class="field is-horizontal info">
+					<p>Segment</p>
+					<div class="field-body" id="showOrder">
+						<div class="field">
+							<p class="control has-icons-right ">
+								<input class="input is-medium" value="White glove" readonly>
+							</p>
+						</div>
+					</div>
+					<span class="icon is-medium status">
+						<img src="images/pizza/icon_whiteglove.png">
+					</span>
+				</div> -->
+
+			 <!--  order ID previous version -->
+				
+				<div class="field is-horizontal info">
+					<!-- picture that gets controlled to show/hide -->
+ 					<img class="orders is-invisible" src="images/pizza/selectorder.png" width="343px" alt="">
+					<p>Order ID</p>
+					<div class="field-body" id="showOrder">
+						<div class="field">
+							<p class="control has-icons-right ">
+								<input class="input is-medium" value="848744917" readonly><span class="icon is-small is-right"><i class="fas fa-sort-down"></i></span>
+							</p>
+						</div>
+
+					</div>
+					<span class="icon status"><i class="fas fa-1x fa-external-link-alt"></i></span>
+				</div>
+				<div class="lineitems">
+					<!--        line items -->
+					
+					<p><span class="title">Status</span><span class="green">Charged</span></p>
+					<p><span class="title">Deal Alert</span><span class="red underline">Alert Present</span></p>
+					<p><span class="title">LOB</span><span>Local</span></p>
+					<p><span class="title strong">Final Sale</span><span class="green">No</span></p>
+					<p><span class="title">Redemption</span><span class="green">Unredeemed</span></p>
+					<p><span class="title">Eligible</span><span class="green">Trade-in</span></p>
+					<p><span class="title">Purchased</span><span>92 Days ago</span></p>
+					<p>
+						<Span class="title">Expiry In</Span><span class="green">29 days</span></p>
+					<p><span class="title">OFP</span><span>&nbsp;</span></p>
+					<p><span class="title">Deal Price</span><span>89.00</span></p>
+					<p><span class="title">Discount</span><span>0.00</span></p>
+					<p><span class="title">Total Paid</span><span>89.00</span></p>
+					<p><span class="title">Permalink</span><span class="blue"><a href="">amarimo-tanning-houston-234</a></span></p>
+					<p><span class="title">Tracking</span><span> </span></p>
+					<p><span class="title">Chat</span><span class="blue"><a href="">897419283719283753</a></span></p>
+					<p>
+						<Span id="promo" class="title">Promotion</Span><span class="green underline">PROMO</span></p>
+				</div>
+			</div>
+		</div>
+		<!--  tool name and login -->
+
+	</div>
+	<div class="footer">
+		<p>Pizza tool v 2.3<span class="is-pulled-right">lzhou@groupon.com&nbsp;&nbsp;<!-- <a>Log Out</a> --></span></p>
+
+	</div>
+
+	</div>
+
+<!--  end of pizza plugin -->
+
+<!-- slide 2  -->
+<div class="slide" id="slide2">
+	<div class="container">
+
+		<h3>Recommended Deals  (WIP)</h3>
+				<!-- deal 1 -->
+				<div class="deal">
+					<div class="columns is-mobile ">
+						<div class="column is-4">
+							
+								<img src="https://img.grouponcdn.com/deal/3GncXZ6BngXg4tZU5BQW/zY-2048x1229/v1/c414x250q85.jpg" alt="">
+						 
+						</div>
+						<div class="column is-8">
+							<p>One 60-Minute Float Session at Refresh Massage & Spa  (Up to 50% Off)</p>
+							<p>Refresh Massage & Float Spa</p>
+							<br>
+							<p><span class="strike">$60</span><span class="green">$30</span></p>
+						</div>
+					</div>
+					<div class="button is-outlined-green is-outlined">Accepted</div>
+					<div class="button is-black is-outlined">Deferred</div>
+					<div class="button is-outlined-red is-outlined">Rejected</div>
+				</div>
+				<!-- deal 2 -->
+				<div class="deal">
+					<div class="columns is-mobile ">
+						<div class="column is-4">
+							
+								<img src="https://img.grouponcdn.com/bynder/dLH6nd8KUve9bFZGimAVEFPJy4G/dL-2048x1229/v1/c349x211q85.jpg" alt="">
+						 
+						</div>
+						<div class="column is-8">
+							<p>Papa Santiagos Pizza</p>
+							<p>2 Slides with Drink</p>
+							<br>
+							<p><span class="strike">$30</span><span class="green">$15</span></p>
+						</div>
+					</div>
+					<div class="button is-outlined-green is-outlined">Accepted</div>
+					<div class="button is-black is-outlined">Deferred</div>
+					<div class="button is-outlined-red is-outlined">Rejected</div>
+				</div>
+	</div>
+	
+</div>
+
+<!-- slide 3  promo codes -->
+<div class="slide" id="slide3">
+	<div class="container">
+		<h3>Promo Codes</h3>
+<br>
+	<table class="table is-bordered is-hoverable ">
+		<thead>
+			<tr>
+				<th>Code</th>
+				<th>Disc.</th>
+				<th>Max Disc.</th>
+				<th>Min Pur.</th>
+				<th>Channel</th>
+				<th>Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th class="green">GETFIFTY</th>
+				<td>50%</td>
+				<td>$25</td>
+				<td>0</td>
+				<td>local</td>
+				<td>08/27-09/27/2018</td>
+			</tr>
+			<tr>
+				<th>GIMMES</th>
+				<td>$5</td>
+				<td>$5</td>
+				<td>$10</td>
+				<td>getaways</td>
+				<td>08/27-09/27/2018</td>
+			</tr>
+			<tr>
+				<th>GIMMES</th>
+				<td>$5</td>
+				<td>$5</td>
+				<td>$10</td>
+				<td>goods</td>
+				<td>08/27-09/27/2018</td>
+			</tr>
+			<tr>
+				<th>GIMMES</th>
+				<td>$5</td>
+				<td>$5</td>
+				<td>$10</td>
+				<td>local</td>
+				<td>08/27-09/27/2018</td>
+			</tr>
+			<tr>
+				<th class="red">TODAY</th>
+				<td>50%</td>
+				<td>$25</td>
+				<td>$0</td>
+				<td>local</td>
+				<td>08/27-09/27/2018</td>
+			</tr>
+			<tr>
+				<th class="blue">CATFOOD</th>
+				<td>20%</td>
+				<td>$20</td>
+				<td>$0</td>
+				<td>all</td>
+				<td>08/27-09/27/2018</td>
+			</tr>
+		</tbody>
+
+			
+		
+		
+	</table>
+
+ <!--  legend -->
+	<div class="legend">
+		<span><span class="is-blue">d</span>Open</span><span><span class="is-green">d</span>Target & Invited</span><span><span class="is-red">d</span>Targeted & Used</span><span><span class="is-grey">d</span>Targeted & Uninvited</span>
+	</div>
+		</div>
+
+
+<!-- slide 4  -->
+<div class="slide" id="slide4">
+<!--   <figure class="image">
+		<img src="https://cdn.pbrd.co/images/HVn1qwr.png" alt="">
+	</figure> -->
+</div>
+
+
+ 
+
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+ -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/pizza.js"></script>
+
+</body>
+
+</html>

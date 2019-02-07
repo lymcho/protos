@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <title>pizza prototype new</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+		
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/pizza_styles.css">
+		<link rel="stylesheet" type="text/css" href="css/pizza_styleguide_styles.css">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+</head>
+<body>
+	
+	<br>
+	<div class="styleguide_container">
+		<div class="columns">
+			<div class="column is-10">
+				<p class="bold">Pizza Tool Style Guide</p>
+			</div>
+		</div>
+		<br><br>
+		<!-- typography -->
+		<hr>
+		<div class="columns">
+			<div class="column is-10">
+				<h3>Typography</h3>
+			</div>
+		</div>
+
+		<div class="columns">
+			<div class="column is-3">			
+				<br>
+				<p>Here's the default body text.</p>
+
+				<div class="code">
+					<p>font-family: 'Open Sans', sans-serif</p>
+					<p>font-size: 12px</p>
+					<p>line-height: 16px</p>
+					<p>font-weight: 400</p>
+					<p>font-color: #333333</p>
+				</div>
+				<br>
+				
+			</div>
+			<div class="column is-3">			
+				<br>
+				<p class="bold">Here's the emphasized body text.</p>
+
+				<div class="code">
+					<p>font-family: 'Open Sans', sans-serif</p>
+					<p>font-size: 12px</p>
+					<p>line-height: 16px</p>
+					<p>font-weight: 600</p>
+					<p>font-color: #333333</p>
+				</div>
+				<br>
+				
+			</div>
+			<div class="column is-3">
+				<br>
+				<h3>Section Title</h3>
+			
+				<div class="code">
+					<p>font-family: 'Open Sans', sans-serif</p>
+					<p>font-size: 12px</p>
+					<p>text-transform: uppercase</p>
+					<p>line-height: 16px</p>
+					<p>font-weight: 600</p>
+					<p>font-color: #75787B</p>
+				</div>
+				<br>
+				
+			</div>
+			<div class="column is-3">
+				<br>
+				<a class="cta">link</a>
+				
+				<div class="code">
+					<p>font-family: 'Open Sans', sans-serif</p>
+					<p>font-size: 12px</p>
+					<p>line-height: 16px</p>
+					<p>font-weight: 400</p>
+					<p>font-color: #0081e3</p>
+				</div>
+				<br>				
+			</div>
+		</div>
+	<!-- color -->
+	<hr>
+	<div class="columns is-multiline">
+		<div class="column is-12">
+				<h3>Color</h3>
+		</div>
+		<div class="column is-1">
+			<p>Dark Grey</p>
+			<p>Primary text</p>
+			<div class="styleguide_colorswatch darkgrey"></div>
+			<div class="code">
+				<p>#333333</p>
+			</div>
+		</div>
+		<div class="column is-1">
+			<p>Medium Grey</p>
+			<p>Secondary text</p>
+			<div class="styleguide_colorswatch mediumgrey"></div>
+			<div class="code">
+				<p>#75787B</p>
+			</div>
+		</div>
+		<div class="column is-1">
+			<p>Light Grey</p>
+			<p>Borders</p>
+			<div class="styleguide_colorswatch lightgrey"></div>
+			<div class="code">
+				<p>#ccc</p>
+			</div>
+		</div>
+		<div class="column is-1">
+			<p>Bg Grey</p>
+			<p>Backgrounds</p>
+			<div class="styleguide_colorswatch bggrey"></div>
+			<div class="code">
+				<p>#f3f3f3</p>
+			</div>
+		</div>
+		<div class="column is-1">
+			<p>Red</p>
+			<p>Alert</p>
+			<div class="styleguide_colorswatch red"></div>
+			<div class="code">
+				<p>#CC0831</p>
+			</div>
+		</div>
+		<div class="column is-1">
+			<p>Green</p>
+			<p>Alert</p>
+			<div class="styleguide_colorswatch green"></div>
+			<div class="code">
+				<p>#367806</p>
+			</div>
+		</div>
+		<div class="column is-1">
+			<p>Blue</p>
+			<p>Alert</p>
+			<div class="styleguide_colorswatch blue"></div>
+			<div class="code">
+				<p>#0070BF</p>
+			</div>
+		</div>
+		<div class="column is-1">
+			<p>Yellow</p>
+			<p>Alert</p>
+			<div class="styleguide_colorswatch yellow"></div>
+			<div class="code">
+				<p>#EO8300</p>
+			</div>
+		</div>
+	</div>
+	
+	<br><br>
+
+	<!-- buttons & inputs-->
+	<hr>
+	<div class="columns is-multiline">
+
+		<div class="column is-12">
+				<h3>Buttons & Inputs</h3>
+
+		</div>
+		<!-- buttons -->
+		<div class="column is-1">
+				<p>Primary</p>
+				<br>
+				<a class="button is-medium is-green" id="copytochat">Button</a>
+		</div>
+		<div class="column is-1">
+				<p>Secondary</p>
+				<br>
+				<a class="button is-medium" id="secondary">Button</a>
+		</div>
+		<div class="column is-1">
+				<p>Inactive</p>
+				<br>
+				<a class="button is-medium is-static">Button</a>
+		</div>
+		<div class="column is-9"> </div>
+		<!-- input with status -->
+		<div class="column is-3">
+			<p>Input with Status: Success</p>
+			<br>
+			<div class="field is-horizontal info">
+					<p>Order ID</p>
+					<div class="field-body" id="showOrder">
+						<div class="field">
+							<p class="control has-icons-right ">
+								<input class="input is-medium" style="color:#367806"  value="10+ Orders" readonly><span class="icon is-small is-right"><i class="fas fa-sort-down"></i></span>
+							</p>
+						</div>
+
+					</div>
+					<!-- <span class="icon is-medium status"><i class="fas fa-2x fa-check-circle"></i></span> -->
+				</div>
+		</div>
+		<div class="column is-3">
+			<p>Input with Status: Fail</p>
+			<br>
+			<div class="field is-horizontal info">
+					<p>Order ID</p>
+					<div class="field-body" id="showOrder">
+						<div class="field">
+							<p class="control has-icons-right ">
+								<input class="input is-medium" style="color:#cc0831 " value="No Orders" disabled>
+							</p>
+						</div>
+
+					</div>
+					<!-- <span class="icon is-medium status "><i class="fas fa-2x fa-times-circle "style="color:#cc0831"></i></span> -->
+				</div>
+			
+		</div>
+		<div class="column is-3">
+			<p>Order Selected</p>
+			<br>
+			<div class="field is-horizontal info">
+					<p>Order ID</p>
+					<div class="field-body" id="showOrder">
+						<div class="field">
+							<p class="control has-icons-right ">
+								<input class="input is-medium" value="848744917" readonly><span class="icon is-small is-right"><i class="fas fa-sort-down"></i></span>
+							</p>
+						</div>
+
+					</div>
+					<span class="icon status"><i class="fas fa-1x fa-external-link-alt" style="color:#75787b"></i></span>
+				</div>
+			
+		</div>
+		<div class="column is-3"></div>
+		<div class="column is-1">
+				<p>Text Input</p>
+				<br>
+
+				<div class="control">
+				<input type="text" class="input is-medium" placeholder="Text input">
+			</div>
+				
+				
+		</div>
+		<div class="column is-2">
+				<p>Input with label</p>
+				<br>
+				<label for="">Label</label>
+				<div class="control">
+				<input type="text" class="input is-medium" placeholder="Text input">
+			</div>
+				
+				
+		</div>
+		<div class="column is-2">
+				<p>Textarea</p>
+				<br>
+				<div class="control">
+				<textarea class="textarea" readonly placeholder="Text area input"></textarea>
+			</div>
+				
+		</div>
+		<div class="column is-2">
+				<p>Search</p>
+				<br>
+				<!--   search macro -->
+			<div class="dropdown is-down">
+				<!--   button -->
+				<div class="dropdown-trigger">
+					<div class="control has-icons-right">
+						<input id="searchmacro" class="input is-medium" type="text" placeholder="Search Macro" value="">
+						<span class="icon is-small is-right">
+				<i class="fas fa-search"></i>
+			</span>
+					</div>
+				</div>
+				<div class="dropdown-menu" role="menu">
+				</div>
+			</div>
+				
+		</div>
+		
+
+
+
+	</div>
+<!-- 	toggles -->
+<div class="columns is-multiline">
+	<div class="column is-12">
+				<h3>Tabs & Toggles</h3>
+		</div>
+		<div class="column is-4">
+			<p>Tabs are for switching tab WITHIN pizza.</p>
+			<p>Toggels are for turning things OUSIDE of pizza</p>
+			
+		</div>
+		<div class="column is-1">
+			<p>Tab - Default</p>
+			<br>
+			<img src="images/pizza/styleguide/tab_default.png" alt="">
+		</div>
+		<div class="column is-1">
+			<p>Tab - Hover</p>
+			<br>
+			<img src="images/pizza/styleguide/tab_hover.png" alt="">
+		</div>
+		<div class="column is-1">
+			<p>Tab - Active</p>
+			<br>
+			<img src="images/pizza/styleguide/tab_active.png" alt="">
+		</div>
+		<div class="column is-1"></div>
+		<div class="column is-1">
+			<p>Toggle - On</p>
+				<br>
+			<p>&nbsp;MW</p>
+			<img src="images/pizza/toggle.png" alt="">
+		</div>
+		<div class="column is-1">
+			<p>Toggle - Off</p>
+				<br>
+			<p>&nbsp;MW</p>
+			<img src="images/pizza/toggle.png" alt="">
+		</div>
+		
+
+</div>	
+<!-- 	status -->
+<br><br><br>
+	<hr>
+	<div class="columns is-multiline">
+		<div class="column is-12">
+				<h3>Status</h3>
+		</div>
+		<div class="column is-2">
+			<p>Default</p>
+			<div class="chat">
+				<p ><span class="bold">Thanh&nbsp;&nbsp;&nbsp;</span><span>01:12&nbsp;&nbsp;</span><span>03:00&nbsp;</span></p>
+			</div>
+		</div>
+		<div class="column is-2">
+			<p>Active</p>
+			<div class="chat active">
+			<p><span class="bold">Chris&nbsp;&nbsp;&nbsp;</span><span>2:45&nbsp;&nbsp;</span><span>00:45&nbsp;</span></p>
+			</div>
+			<div class="code">
+				<p>border: 1px solid #367806</p>
+				<p>background-color: #EDF5E7</p>
+			</div>
+		</div>
+		<div class="column is-2">
+			<p>Alert</p>
+			<div class="chat alert">
+			<p><span class="bold">Alice&nbsp;&nbsp;&nbsp;</span><span>5:45&nbsp;&nbsp;</span><span>4:45&nbsp;</span></p>
+			</div>
+			<div class="code">
+				<p>animation: chatalert 0.6s ease infinite alternate</p>
+				<p>@keyframes chatalert</p>
+				<p>0%</p>   
+    			<p>&nbsp;&nbsp;background-color: white</p>
+    			<p>&nbsp;&nbsp;color: $red</p>
+  				<p>100% </p>
+    			<p>&nbsp;&nbsp;background-color: $red</p>
+    			<p>&nbsp;&nbsp;color: white</p>
+
+			</div>
+		</div>
+		
+	</div>
+
+
+<!-- 	containers -->
+	<br><br><br>
+	<hr>
+	<div class="columns is-multiline">
+		<div class="column is-12">
+				<h3>Containers</h3>
+
+		</div>
+		<div class="column is-4">
+				<p>with border</p>
+				<div class="styleguide_samplecard styleguide_withborder">
+					<h3>Content</h3>
+					<p>Content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore iusto quidem aperiam nisi, adipisci possimus quam molestiae quaerat mollitia sed deleniti est sunt, voluptatibus sint non pariatur quo asperiores eligendi!</p>
+				</div>
+				<div class="code">
+					<p>padding: 12px</p>
+					<p>border: 1px solid #ccc</p>
+				</div>
+				
+		</div>
+		<div class="column is-3">
+				<p>filled</p>
+				<div class="styleguide_samplecard styleguide_filled">
+					<p><strong>1</strong>&nbsp;&nbsp;Content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore iusto quidem aperiam nisi, adipisci.</p>
+				</div>
+				<div class="code">
+					<p>padding: 12px</p>
+					<p>background-color: #F3f3f3</p>
+				</div>
+		</div>
+		<div class="column is-3">
+				
+
+		</div>
+	</div>
+
+<!-- modal styles -->
+
+<br><br><br>
+	<hr>
+	<div class="columns is-multiline">
+		<div class="column is-12">
+				<h3>Modal Styles</h3>
+
+		</div>
+		<div class="column is-4">
+				<p class="bold">Modal</p>
+				<br>
+				<p>All modals should extend to match the width of its parent container, and vertically aligned.</p>
+				<p>Use margin/padding in increments of 4px to insure consistency.</p>
+				<p>Always include an exit option both on top right corner and as secondary CTA.</p>
+				<p>In closed position, if a new panel is clicked, it will automatically open.</p>
+
+				
+		</div>
+		<div class="column is-3">
+				<p>Narrow Modal</p>
+				<br>
+				<figure class="image">
+					<img src="images/pizza/styleguide/modal01.png" alt="">
+				</figure>
+		</div>
+		<div class="column is-5">
+				<p>Large Modal</p>
+				<br>
+				<figure class="image">
+					<img src="images/pizza/styleguide/modal02.png" alt="">
+				</figure>
+		</div>
+	</div>
+<!-- 	interaction -->
+	<br><br><br>
+	<hr>
+	<div class="columns is-multiline">
+		<div class="column is-12">
+				<h3>Interactions</h3>
+
+		</div>
+		<div class="column is-4">
+				<p class="bold">Panel Open/Close</p>
+				<br>
+				<p>Clicking on the arrow carot will open and close panel universally.The carrot icon will change based on open/close status.</p>
+				<p>The open/close should not intefere with panel states.(e.g. if on RD, closing panel will not change which panel you are on.</p>
+				<p>In closed position, if a new panel is clicked, it will automatically open.</p>
+				
+		</div>
+		<div class="column is-4">
+				<p>Open</p>
+				<br>
+				<figure class="image">
+					<img src="images/pizza/styleguide/showhide01.png" alt="">
+				</figure>
+		</div>
+		<div class="column is-4">
+				<p>Close</p>
+				<br>
+				<figure class="image">
+					<img src="images/pizza/styleguide/showhide02.png" alt="">
+				</figure>
+		</div>
+		
+		<div class="column is-4">
+				<p class="bold">Dropdown</p>
+				<br>
+				<p>Dropdown containers should always have a scrollbar inside. It should expand to the full width of the pizza if possible. Heighwise, it should extend to bottom of browser in order to show as much info as possible.</p>
+				<div class="code">
+					<p>padding: 8px or 12px</p>
+					<p>box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.36);</p>
+
+				</div>
+				
+		</div>
+		<div class="column is-4">
+				<p>Example 1</p>
+				<br>
+				<figure class="image">
+					<img src="images/pizza/styleguide/dropdown01.png" alt="">
+				</figure>
+		</div>
+		<div class="column is-4">
+				<p>Example 2</p>
+				<br>
+				<figure class="image">
+					<img src="images/pizza/styleguide/dropdown02.png" alt="">
+				</figure>
+		</div>
+
+		<div class="column is-4">
+				<p class="bold">Pizza Wheel</p>
+				<br>
+				<p>When hover over a slice(including the text on it), slice bg darkens.</p>
+				<div class="code">
+					<p>background: $f3f3f3 (default)</p>
+					<p>background: $ccc (hover)</p>
+				</div>
+				
+		</div>
+		<div class="column is-4">
+				<p>Default</p>
+				<br>
+				<figure class="image">
+					<img src="images/pizza/styleguide/wheel01.png" alt="">
+				</figure>
+		</div>
+		<div class="column is-4">
+				<p>Hover/Click</p>
+				<br>
+				<figure class="image">
+					<img src="images/pizza/styleguide/wheel02.png" alt="">
+				</figure>
+		</div>
+		
+		<div class="column is-4">
+		<!-- second line -->
+				<p class="bold">Search Macro</p>
+				<br>
+				<p>When hover over a slice(including the text on it), slice bg darkens.</p>
+				<div class="code">
+					<p>background: $f3f3f3 (default)</p>
+					<p>background: $ccc (hover)</p>
+				</div>
+				
+		</div>
+
+		<div class="column is-4">
+				
+				<br>
+				<p>Default</p>
+				<figure class="image">
+					<img src="images/pizza/styleguide/formstates01.png" alt="">
+				</figure>
+		</div>
+		<div class="column is-4"></div>
+		<!-- 2 line -->
+		<div class="column is-4">
+			<br>
+			<p>when click or type in the input field or search icon, search results drop down</p>
+		</div>
+
+		<div class="column is-4">
+				<br>
+				<figure class="image">
+					<img src="images/pizza/styleguide/formstates02.png" alt="">
+				</figure>
+		</div>
+		<div class="column is-4"></div>
+		<!-- 3line -->
+		<div class="column is-4">
+				<br>
+				<p>Once a macro is selected, snippet text area populates but input field does NOT clear</p>
+		</div>
+		<div class="column is-4">
+				
+				<br>
+				<figure class="image">
+					<img src="images/pizza/styleguide/formstates03.png" alt="">
+				</figure>
+		</div>
+		<div class="column is-4"></div>
+		<!-- 4line -->
+		<div class="column is-4">
+				<br>
+				<p>After clicking on "copy to chat" button, send snippet to chat. Input field & snippet text area does NOT clear</p>
+		</div>
+		<div class="column is-4">
+				
+				<br>
+				<figure class="image">
+					<img src="images/pizza/styleguide/formstates04.png" alt="">
+				</figure>
+		</div>
+		<div class="column is-4"></div>
+		<!-- 5line -->
+		<div class="column is-4">
+				<br>
+				<p>When interacting with the input field again, autohighlight the previous search term</p>
+		</div>
+		<div class="column is-4">
+				
+				<br>
+				<figure class="image">
+					<img src="images/pizza/styleguide/formstates05.png" alt="">
+				</figure>
+		</div>
+		<div class="column is-4"></div>
+
+		
+
+		
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>	
+
+<script src="js/pizza.js"></script>
+</body>

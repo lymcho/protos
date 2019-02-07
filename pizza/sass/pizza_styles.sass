@@ -1,0 +1,693 @@
+//****************************//
+//******** Notes *************//
+//****************************//
+// imported bulma css for layout, input, dropdown styles etc
+// imported font-awesome for icons
+
+
+
+
+$darkgrey: #333333
+$mediumgrey: #75787B
+$lightgrey: #ccc
+//$bggrey: #F6F7F8
+$bggrey: #f3f3f3
+$red: #CC0831
+$green: #367806 
+$lightgreen: #EDF5E7
+$darkgreen: #367806
+$blue: #0081e3
+$yellow: #E08300
+$font-family: 'Open Sans', sans-serif
+$appheight: 1206px
+
+html
+    font-family: $font-family !important
+    font-size: 10px
+    //color of the chat screen software bg
+    background: #F9F7F9 
+::-webkit-scrollbar
+    display: none
+
+body
+    color: $darkgrey
+
+// ::-webkit-scrollbar 
+//     width: 0px
+//     background: transparent /* make scrollbar transparent */
+
+@mixin font
+    font-family: $font-family
+
+//****************************//
+//******** Typography ********//
+//****************************//
+
+//section labels  
+h3
+  font-size: 1.2rem
+  color: $mediumgrey
+  line-height: 1.4rem
+  text-transform: uppercase
+  font-weight: 600
+  letter-spacing: 0.02px
+  //padding-bottom: 0.8rem
+//body
+p
+  font-size: 1.2rem
+  line-height: 1.6rem
+.cta
+  text-transform: Capitalize
+  font-weight: 400
+.bold
+    font-weight: 600
+.center 
+  text-align: center
+.chat
+  display: inline-block
+  padding: 4px
+  margin: 8px 0 0 0 
+  border-radius: 4px
+  border: 1px solid $mediumgrey
+  &.active
+    border: 1px solid $green
+    background-color: $lightgreen
+  &.alert
+    border: 1px solid $red
+    background-color: white
+    animation: chatalert 0.6s ease infinite alternate
+//chat alert    
+@keyframes chatalert 
+  0%   
+    background-color: white
+    color: $red
+  100% 
+    background-color: $red
+    color: white
+
+
+
+
+
+//link styles
+a
+    font-size: 1.2rem
+    &:hover
+        color: $blue
+        text-decoration: underline
+//icons
+i
+    padding: 1rem 1rem 1rem 1rem
+    color: $mediumgrey
+    cursor: pointer
+    &:hover
+        color: $mediumgrey
+//sizing the open in new link icon
+.fa-external-link-alt
+  //color: blue
+  margin-top: 1rem
+  font-size: 1.6rem
+//form label
+label
+    font-size: 1.2rem
+    line-height: 2.4rem
+//input style
+input, textarea, .dropdown
+    border-color: $lightgrey !important
+    
+::placeholder
+  color: $mediumgrey !important
+
+
+
+
+.background
+    position: fixed
+    top: 0
+    left: 0
+    width: 1400px
+    overflow: scroll
+    #chat
+        position: absolute
+        top: 540px
+        left: 360px
+        max-width: 440px
+        font-size: 12px
+       
+
+
+.rail
+    position: fixed
+    top: 0
+    right: 440px
+    width: 40px
+    z-index: 1000
+    background-color: white
+    height: 100%
+    border: 1px solid $lightgrey
+    //transition: 0.2s
+    //push right icon
+    i
+      padding: 1.2rem 0 1.2rem 1.6rem 
+
+    //circle items in the rail
+    ul
+      li
+          
+          list-style: none
+          line-height: 1.2rem
+          font-size: 1.2rem
+          text-align: center
+          margin: 0.4rem
+          
+          &.tab 
+            height: 3rem
+            line-height: 3rem
+            border: 1px solid $lightgrey
+            border-radius: 2.4rem 
+            color: $mediumgrey
+            cursor: pointer
+
+          
+          &.active
+              color: $darkgrey
+              border: 1px solid $mediumgrey
+          
+          &:hover
+            
+              //color: $mediumgrey
+              border: 1px solid $mediumgrey
+      &.rail_bottom
+        position: absolute
+        bottom: 0
+        text-align: center
+        img
+          padding-left: 0.5rem
+        li
+          //background-color: $lightgrey
+          border: 1px solid $lightgrey
+          border-radius: 0.4rem
+          height: 4rem
+          line-height: 1.6rem
+          padding-top: 0.4rem
+          &:hover
+            border-color: $darkgrey 
+            cursor: pointer
+    
+
+
+//when tab or switch is selected
+.rail_active
+  background-color: $darkgrey
+  color: white !important  
+  
+//tooltip for tab 1-4
+@mixin tooltip_tab
+    font-size: 12px
+    line-height: 20px
+    font-family: $font-family
+    padding: 0rem 1rem
+    border-radius: 0.4rem
+    width: auto
+    text-align: center
+    position: absolute
+    right: 48px
+    background-color: $darkgrey
+    color: white
+    z-index: 1000
+
+#tab1
+    &:hover
+        &:before
+            content: "Pizza"
+            @include tooltip_tab           
+#tab2
+  &:hover
+    &:before
+        content: "Recommended Deals"
+        @include tooltip_tab
+#tab3
+  &:hover
+    &:before
+      content: "Promo Codes"
+      @include tooltip_tab   
+#tab4
+  &:hover
+    &:before
+      content: "Microwave"
+      @include tooltip_tab     
+
+
+.container
+  border-top: 1px solid $lightgrey
+  max-width: 440px
+  padding: 1.2rem
+
+
+.footer
+  width: 440px
+  height: 32px
+  position: absolute
+  bottom: 0
+  right: 0
+  margin: 0
+  padding: 0.8rem
+  background-color: $bggrey
+  
+
+
+
+.hidewheel
+  color: $blue
+  cursor: pointer
+.pizzasection
+  //background-color: blue
+  padding: 0 0 4px 32px
+  display: flex
+  flex-flow: row nowrap
+  vertical-align: center
+  //pizza wheel
+  .pizza
+      position: relative 
+      width: 300px 
+      height: 300px 
+      cursor: pointer
+      ul 
+        position: absolute 
+        width: 300px 
+        height: 300px 
+        margin: 0px 
+        padding: 0 
+        list-style: none 
+        border-radius: 50% 
+        overflow: hidden
+      .text
+        position: absolute
+        z-index: 5000
+        width: 1rem
+        color: $darkgrey
+        font-weight: bold
+
+        &.slice1           
+            top: 8rem
+            left: 2rem  
+        &.slice2         
+            top: 3rem
+            left: 13rem
+        &.slice3          
+            top: 9rem
+            left: 22rem
+        &.slice4
+            top: 18rem
+            left: 3rem
+        &.slice5        
+            top: 23rem
+            left: 11rem         
+        &.slice6
+            top: 17rem
+            left: 20.5rem
+
+           
+      .pizzacenter 
+        position: absolute 
+        top: 122px
+        left: 122px
+        width: 56px
+        height: 56px
+        z-index: 1 
+        background: black
+        border-radius: 50% 
+        box-shadow: 0 0 3px #ccc 
+        p
+          color: white
+          font-weight: 600
+          padding: 2.0rem 0 0 1.3rem
+          
+      li 
+        position: absolute 
+        top: -10px 
+        left: -10px 
+        width: 160px 
+        height: 160px 
+        border-bottom: 1px solid $lightgrey
+        color: black
+        background: $bggrey
+        transform-origin: 100% 100% 
+        //each of the wheel
+        overflow: hidden 
+        //text that lives outside of the slice
+        &:nth-child(1) 
+          transform: rotate(0deg) skew(30deg) 
+        &:nth-child(2) 
+          transform: rotate(60deg) skew(30deg) 
+        &:nth-child(3) 
+          transform: rotate(120deg) skew(30deg) 
+        &:nth-child(4) 
+          transform: rotate(180deg) skew(30deg) 
+        &:nth-child(5) 
+          transform: rotate(240deg) skew(30deg) 
+        &:nth-child(6) 
+          transform: rotate(300deg) skew(30deg) 
+        &:hover 
+          background-color: $lightgrey
+        
+  
+  //tool icons
+
+  .icons
+    padding-left: 1.2rem
+    cursor: pointer
+
+    .icon
+      //background-color: $lightgrey
+      color: $mediumgrey
+      margin: 0 0 8px 0
+      border-radius: 3rem
+      border: 1px solid $lightgrey
+      &:hover
+        background-color: $bggrey
+//tooltip to explain each icon
+//tooltip style
+@mixin tooltip
+    font-size: 12px
+    font-family: $font-family
+    padding: 0.4rem 0.8rem
+    border-radius: 0.4rem
+    width: auto
+    text-align: right
+    position: absolute
+    right: 88px
+    background: $darkgrey
+    color: white
+    cursor: pointer
+    z-index: 6000
+
+#edit1
+    &:hover
+        &:before
+            content: "Move"
+            @include tooltip
+          
+#edit2
+    &:hover
+        &:before
+            content: "Add"
+            @include tooltip
+
+#edit3
+    &:hover
+        &:before
+            content: "Remove"
+            @include tooltip
+#edit4
+    &:hover
+        &:before
+          content: "Edit"
+          @include tooltip
+
+#edit5
+    &:hover
+        &:before
+          content: "Download Snippets"
+          @include tooltip
+#edit6
+    &:hover
+        &:before
+          content: "Reset Wheel"
+          @include tooltip
+
+//snippet display area
+.display
+  padding: 8px 0 0 0
+//remove the border in reason code search
+.reasoncode
+  margin: 8px 0 0 0 
+  .icon
+    border: 0
+  p
+    border-radius: 4px
+    padding: 8px
+    background-color: $bggrey
+    border: 1px solid $bggrey
+    margin: 8px 0 0 0
+    cursor: pointer
+    &:hover
+      border: 1px solid $lightgrey
+      transition: 0.2s
+    span
+      padding: 0 0.8rem 0 0 
+      font-weight: 600
+//override for copy to chat button
+#copytochat    
+  font-weight: 600 !important
+  border: 1px solid $green !important
+  &:hover
+    color: white
+    text-decoration: none
+    //background-color: $darkgreen
+#secondary 
+  border: 1px solid $darkgrey !important
+    
+//info overrides
+.info
+  margin: 8px 0 0 0 
+  font-size: 1.2rem
+  font-weight: 400
+  display: flex
+  flex-flow: row nowrap
+  text-align: left
+  //label
+  p
+    font-size: 1.2rem
+    line-height: 2.4rem
+    min-width: 60px
+    
+  //form field
+  .field-body
+    margin-right: 0rem
+    margin-left: 4px
+  .icon
+    margin-left: 0.8rem
+    
+    
+//status icons    
+.status
+  border: 0
+  padding-top: 6px
+  .fa-circle
+    color: $lightgrey
+  .fa-check-circle
+    color: $green
+
+//override form behaviro
+
+#name, #order
+  border: 1px solid blue
+  width: 116px
+#email
+  border: 1px solid blue
+  width: 140px
+  
+  
+
+    
+
+
+.lineitems
+
+    //background: blue
+    p
+      padding-bottom: 0rem
+      margin: 0
+
+      span
+        font-size: 1.2rem
+        line-height: 1.1rem
+        font-weight: 400
+
+        display: inline-block
+        width: 130px
+        vertical-align: top
+        //position: relative
+        //text-align: right
+        padding-left: 4px
+        &.title
+          width: 70px
+          display: inline-block
+          padding-left: 0px
+          text-align: left
+          //background: blue
+        
+      
+
+    
+
+    
+//colors
+.red
+    color: $red !important
+.green
+    color: $green !important
+.yellow
+    color: $yellow !important
+.blue
+    color: $blue !important
+//color overrides
+.is-outlined-green
+    border: 1px solid $green
+    color: $green
+    &:hover
+        color: white
+        background-color: $green
+        border: 1px solid $green
+.is-outlined-red
+    border: 1px solid $red
+    color: $red
+    &:hover
+        color: white
+        background-color: $red
+        border: 1px solid $red
+
+  
+//fill color
+.is-green
+  background: $green
+  color: white
+.is-green-light
+  background-color: $lightgreen
+.is-red
+  background: $red
+  color: white
+.is-blue
+  background: $blue
+  color: white
+.is-grey
+  background: $mediumgrey
+  color: white
+
+
+//status
+
+.strong
+    font-weight: 700 !important
+.underline
+    text-decoration: underline
+.strike
+    text-decoration: line-through
+
+//visibility
+.is-visible
+    display: block
+.is-invisible
+    display: none 
+  
+  
+//dropdown  
+.dropdown-trigger
+  width: 320px
+  padding-left: 6px
+  .icon
+    border: 0
+.dropdown-menu
+  cursor: pointer
+  padding: 0px
+  margin-top: 0.8rem
+  width: 100%
+  
+  .dropdown-content
+    //padding: 8px 8px 16px 8px
+    //margin-top: 0.8rem
+   
+    .dropdown-item
+      margin: 0px
+      padding: 0px
+     
+      //all the children
+      
+      &>*
+        //padding: 8px
+        &:hover
+          background-color: $bggrey
+      span
+        line-height: 32px
+        //vertical-align: top
+        padding-left: 0.8rem
+        &:first-of-type
+          //color: blue
+          font-weight: 600
+          width: 64px
+          display: inline-block
+        &.code
+          width: 320px
+          //height: 45px
+          line-height: 32px
+          margin-left: 0.8rem
+          display: inline-block
+          //padding-top: 8px
+          
+          //background-color: pink
+        
+
+.appear
+  display: block
+.hide
+  border: 1px solid blue
+//text area
+.textarea
+  font-size: 1.2rem
+  color: $mediumgrey
+  padding: 4px 0 0 4px 
+  margin-bottom: 1.2rem
+  //overflow: scroll !important
+  min-height: 80px !important
+  
+.slide
+  width: 440px
+  height: $appheight
+  font-size: 1.2rem
+  font-family: $font-family
+  position: absolute
+  top: 0px
+  right: 0px
+  width: 440px
+  background-color: #fff
+  //height: auto
+
+//deals
+.deal
+    padding: 1.6rem 0 1.6rem 0
+    font-family: $font-family !important
+
+    .button
+        margin-right: 0.4rem !important
+    p
+        font-size: 12px
+        &:nth-of-type(1)
+            color: $darkgrey
+            line-height: 16px
+            margin-bottom: 0.4rem
+        &:nth-of-type(2)
+            color: $mediumgrey
+//promo
+.legend
+    span
+        color: $darkgrey
+        padding-right: 0.8rem
+        display: block
+        span
+            display: inline
+            color: transparent
+            font-size: 8px
+            line-height: 0.2rem
+            width: 1rem
+            height: 1rem
+            border-radius: 0.4rem
+            margin-right: 0.4rem
+//orders pic
+.orders
+    position: absolute
+    z-index: 4000
+    top: 16rem
+    left: 6rem
+
+     

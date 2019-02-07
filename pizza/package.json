@@ -1,0 +1,16 @@
+{
+  "name": "pizza_prototype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ling Zhou",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "sass-convert": "^0.5.2"
+  }
+}
