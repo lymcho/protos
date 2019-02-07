@@ -28,6 +28,9 @@ p {
 .bold {
   font-weight: 600; }
 
+.center {
+  text-align: center; }
+
 .chat {
   display: inline-block;
   padding: 4px;
@@ -64,7 +67,8 @@ i {
     color: #75787B; }
 
 .fa-external-link-alt {
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  font-size: 1.6rem; }
 
 label {
   font-size: 1.2rem;
