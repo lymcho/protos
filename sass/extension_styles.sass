@@ -1,0 +1,102 @@
+@import "variables.sass"
+@import "styles.sass"
+
+$lightgreen: #EDF5E7
+
+//website containter
+.site
+	width: 1200px
+	height: 800px
+	.bg
+		position: absolute
+		z-index: -3
+
+	.plugin_container
+		position: absolute
+		top: 24px
+		right: 24px
+		z-index: 3
+		//margin: 40px
+		width: 400px
+		height: 352px
+		border: 1px solid $color-gray-lt
+		border-radius: 4px
+		background: white
+		display: flex
+		flex-flow: row nowrap
+		.left
+			padding: 16px
+			width: 200px
+
+			h3
+				width: 240px
+				font-weight: 600
+			.cta
+				&:hover
+					background: #417505
+					transition: 1s
+				
+			.illo
+
+				margin: 0 auto	
+				padding: 12px 0 12px 
+				.back
+					position: absolute
+					z-index: -2
+					top: 80px
+					right: 210px
+				.front
+					position: absolute
+					z-index: -1
+					top: 80px
+					right: 230px
+					transition: 3s
+
+
+
+
+			h1
+				text-align: center
+
+			 	
+
+		.right
+			//background: $lightgreen
+			background: $color-gray-bg
+			width: 200px
+			padding: 32px
+			overflow: hidden
+			
+			.codes
+				animation: rollingcredits 3s linear infinite 
+
+				p
+					font-size: 12px
+					font-weight: $font-weight-medium
+					color: $color-black
+					line-height: 32px
+//optional animation peel off codes
+.peel
+	animation: codepeel 1s 0.2s forwards
+	
+
+@keyframes rollingcredits
+	0%
+		transform: translateY(-40px)
+
+	100%
+		transform: translateY(-200px)
+
+//make an animation that the hand slides left upon hover and then peel off upon click
+@keyframes codepeel
+	0%
+		transform: translateX(0px)
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+
+	100%
+		transform: translateX(-40px)
+		clip-path: polygon(30% 0, 100% 0, 100% 100%, 30% 100%)
+
+
+
+		
