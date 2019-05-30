@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <title>3PIP - Musement Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/musement_styles.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
+</head>
+<body>
+
+<img src="../images/3pip/musement_nav.png" alt="">
+<div class="content">
+	<div class="left">
+		<br>
+		<h1>Deal title goes here</h1>
+		<p>Location and other descriptions</p>
+		<br><br>
+		<h2>Choose a date</h2>
+		<br>
+	<!-- 	choose date calendar -->
+		<img class="dropdown" src="images/3pip/calendar.png" width="660px" data-swap="images/3pip/calendar_collapsed.png">
+	<!-- 	choose party -->
+		<br><br><br>
+		<h2>Choose your party</h2>
+		<br>	
+		<img class="dropdown" src="images/3pip/party.png" width="660px" data-swap="images/3pip/party_collapsed.png">
+
+	<!-- 	choose experience-->
+		<br><br><br>
+		<h2>Choose an experience</h2>
+		<br>	
+		<img class="dropdown" src="images/3pip/experience.png" width="660px" data-swap="images/3pip/experience_collapsed.png">
+
+	<!-- 	other preferences-->
+		<br><br><br>
+		<h2>Other preferences</h2>
+		<br>	
+		<img class="dropdown" src="images/3pip/other.png" width="660px" data-swap="images/3pip/other.png">
+
+	</div>
+		
+
+	<div class="right">
+		<div class="stickyrightrail">
+			<img src="../images/3pip/summary.png" width="353px" alt="">
+		</div>
+
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-js/1.2.0/sticky.min.js"></script>
+<script>
+	var sticky = new Sticky('.stickyrightrail');
+</script>
+<script>
+	$(document).ready(function(){
+    $(".dropdown").click(function() { 
+       var _this = $(this);
+       var current = _this.attr("src");
+       var swap = _this.attr("data-swap");     
+     _this.attr('src', swap).attr("data-swap",current);   
+});  
+});
+</script>
+</body>

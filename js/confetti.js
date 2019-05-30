@@ -6,11 +6,11 @@ var width, height;
 
 var items = [];
 var colors = ['#3EDA8D7', '#C5ED9F', '#FFD626', '#F8CEA8', '#00a944', '#F36F6E', '#43c4c0'];
-// var colors = ['#3788c7', '#f298be', '#f6e25b', '#8a5bac', '#00a944', '#ec2a28', '#43c4c0', '#f4b92f', "3EDA8D7"];
 var index = 150;
 
 function resize(){
   width = canvas.width = window.innerWidth
+  //set up height here so the confetti panel appears above fine print.
   height = canvas.height = 620
 }
 

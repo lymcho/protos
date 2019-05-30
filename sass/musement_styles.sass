@@ -1,0 +1,59 @@
+@import "variables.sass"
+//deal title font
+h1
+	font-family: $font-stack
+	font-size: $font-size-xxl
+	font-weight: $font-weight-bold
+	padding: 0 
+	margin: 0
+//deal section font
+h2
+	font-family: $font-stack
+	font-size: $font-size-xl
+	font-weight: $font-weight-bold
+	padding: 0 
+	margin: 0
+//body
+p
+	font-family: $font-stack
+	font-size: $font-size-s
+	font-weight: $font-weight-medium
+	padding: 0 
+	margin: 0
+
+
+$leftpanelwidth: 692px
+$rightpanelwidth: 353px
+$gap: 32px
+//layout
+.content
+	display: flex
+	flex-flow: row nowrap
+	height: 2200px
+
+	.left
+		width: $leftpanelwidth
+		margin-left: 195px
+	.right
+		.stickyrightrail
+			padding: 40px 0 0 0
+
+
+//placeholders
+.box
+	border: 1px solid $color-gray-lt
+	text-align: center
+	&.summary
+		width: $rightpanelwidth
+		height: 400px
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+/*  Contexts besides default?
+	- $border-control
+	- $border-container */
+h1 {
+  font-family: "Open Sans";
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0;
+  margin: 0; }
+
+h2 {
+  font-family: "Open Sans";
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0;
+  margin: 0; }
+
+p {
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0;
+  margin: 0; }
+
+.content {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 2200px; }
+  .content .left {
+    width: 692px;
+    margin-left: 195px; }
+  .content .right .stickyrightrail {
+    padding: 40px 0 0 0; }
+
+.box {
+  border: 1px solid #D5D8DB;
+  text-align: center; }
+  .box.summary {
+    width: 353px;
+    height: 400px; }
