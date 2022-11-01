@@ -11,7 +11,7 @@
   "dependencies": {
     "browser-sync": "^2.23.7",
     "bulma": "^0.7.2",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-sass": "^4.0.1",
     "npm": "^6.4.1",
     "sass-convert": "^0.5.2",
